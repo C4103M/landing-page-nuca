@@ -1,0 +1,54 @@
+/* ------------------------------------------------ SESSÃO 1 ---------------------------------------------------------- */
+.section1 {
+    width: 100%;
+    height: calc(100dvh - 111px);
+    background: linear-gradient(180deg, var(--background-color, #1F63A0) 27.35%, #023C65 87.1%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec1-content {
+    width: 70%;
+    /* border: 1px solid black; */
+}
+
+.sec1-content h1 {
+    color: var(--font-color, #FFF9F9);
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 67.2px */
+    width: 609px;
+}
+
+.sec1-content p {
+    color: var(--font-color, #FFF9F9);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sec1-content-btn {
+    display: flex;
+    width: 198px;
+    height: 60px;
+    padding: 18px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--background-secondary, #00B081);
+    border: none;
+}
+
+.sec1-content-btn p {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

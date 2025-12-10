@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("header.css");
+@import url("footer.css");
+@import url("sections/section1.css");
+@import url("sections/section2.css");
+@import url("sections/section3.css");
+@import url("sections/section4.css");
+
+:root {
+    --background-color: #1F63A0;
+    --background-secondary: #00B081;
+    --coloreste: #1D6FA9;
+    --teste-cta: #00908F;
+    --testeazul: #36AFCE;
+    --font-color: #f3f3f3;
+}
+
+* {
+    font-family: Rubik;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+

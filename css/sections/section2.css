@@ -1,0 +1,157 @@
+/* ------------------------------------------------ SESSÃO 2 ---------------------------------------------------------- */
+
+.section2 {
+    width: 100%;
+    height: 200dvh;
+    background-image: url("../../img/quadriculado.png");
+    overflow: hidden;
+    /* padding: 1px; */
+}
+
+.section2-2,
+.section2-1 {
+    width: 100%;
+    height: 100dvh;
+}
+
+.title-s2 {
+    color: var(--background-color, #1F63A0);
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 96px 0 0 96px;
+    /* 67.2px */
+}
+
+.p-sec2 {
+    /* border: 1px solid black;  */
+    width: 639px;
+    height: 145px;
+    margin-left: 120px;
+    color: var(--background-color, #1F63A0);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 28px */
+}
+
+.destaque {
+    color: var(--background-secondary);
+}
+
+.cards {
+    width: 100%;
+    height: 372px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 127px;
+}
+
+/* Efeito de escurecer ao passar o mouse e efeitos de destaque */
+.section2::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    pointer-events: none;
+}
+
+.section2:has(.card:hover)::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.card {
+    width: 335.073px;
+    height: 372px;
+    border-radius: 30px;
+    position: relative;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card1 {
+    background: var(--Colorteste, #1D6FA9);
+
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.03);
+    backdrop-filter: blur(4px);
+}
+
+.card2 {
+    background: var(--teste-CTA, #00908F);
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.03);
+    backdrop-filter: blur(4px);
+}
+
+.card3 {
+    background: var(--testeazul, #36AFCE);
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-card {
+    width: 100%;
+    text-align: center;
+    color: var(--font-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.div-pcard {
+    width: 321.397px;
+    height: 153.176px;
+    border-radius: 30px;
+    background-color: var(--font-color);
+    display: flex;
+    align-items: center;
+
+}
+
+.pcard-txt {
+    color: var(--background-color, #1F63A0);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    padding: 10px;
+}
+
+.pcard-list {
+    color: var(--background-color, #1F63A0);
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.pcard-list li::marker {
+    /* Cor desejada para a bolinha */
+    color: var(--background-secondary);
+    /* Ajusta o tamanho da bolinha */
+    font-size: 1.7em;
+}
