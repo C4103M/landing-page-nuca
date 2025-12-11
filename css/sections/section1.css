@@ -1,18 +1,24 @@
 /* ------------------------------------------------ SESSÃO 1 ---------------------------------------------------------- */
 .section1 {
     width: 100%;
-    height: calc(100dvh - 111px);
+    height: 100dvh;
     background: linear-gradient(180deg, var(--background-color, #1F63A0) 27.35%, #023C65 87.1%);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .sec1-content {
     width: 70%;
     /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
 }
-
+.preenchimento {
+    width: 100%;
+    height: 111px;
+}
 .sec1-content h1 {
     color: var(--font-color, #FFF9F9);
     font-family: Rubik;

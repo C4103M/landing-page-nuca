@@ -1,5 +1,158 @@
-.footer {
-    width: 100%;
-    height: 5845px;
-    background: conic-gradient(from 180deg at 50% 50%, #36AFCE 148.43987345695496deg, #1B5868 360deg);
+
+/* Container Principal do Footer */
+.site-footer {
+    background-color: var(--dark-blue);
+    color: var(--font-color);
+    padding: 60px 0 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid Layout */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Colunas */
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Títulos das Colunas */
+.footer-col h3 {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Detalhe visual abaixo dos títulos (o "underline" verde) */
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--background-secondary);
+    width: 40px;
+    height: 3px;
+}
+
+/* Texto Institucional */
+.footer-about-text {
+    color: var(--text-grey);
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    color: var(--background-secondary);
+    font-weight: bold;
+}
+
+/* Links (Listas) */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--background-secondary);
+    transform: translateX(5px);
+}
+
+/* Ícones de contato */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: var(--text-grey);
+}
+
+.contact-item i {
+    color: var(--background-secondary);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.contact-emails a {
+    display: block;
+    color: var(--text-grey);
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.contact-emails a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Redes Sociais */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--background-secondary);
+    color: var(--dark-blue);
+}
+
+/* Barra de Copyright */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
