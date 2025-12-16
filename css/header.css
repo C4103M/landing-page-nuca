@@ -50,6 +50,16 @@ header {
     font-weight: 600;
     line-height: normal;
 }
+.p-header a {
+    color: var(--font-color, #FFF9F9);
+    text-decoration: none;
+}
+
+@media (max-width: 884px) {
+    header {
+        gap: 35px;
+    }
+}
 
 @media (max-width: 428px) {
     header {
@@ -81,7 +91,4 @@ header {
     }
 }
 
-.p-header a {
-    color: var(--font-color, #FFF9F9);
-    text-decoration: none;
-}
+

@@ -1,283 +1,800 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        ></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "ie7qCY7G09khlthBM",
+                });
+            })();
+        </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Núcleo Campinas</title>
-</head>
+        <title>Núcleo Campinas</title>
+    </head>
 
-<body>
-    <header>
-        <img src="./img/logo-nuca.png" alt="logo-nuca" class="logo-header">
-        <p class="p-header"><a href="">Sobre nós</a></p>
-        <p class="p-header"><a href="">Universidades</a></p>
-        <p class="p-header"><a href="">Serviços</a></p>
-        <p class="p-header"><a href="">Parceiros</a></p>
-        <button class="btn-header">
-            <p>Entre em contato</p>
-        </button>
-    </header>
-    <div class="section1">
-        <div class="preenchimento">
-        </div>
-        <div class="sec1-content">
-            <div class="sec1-content-txt">
-                <h1 id="sec1-title">Líderes que transformam o Brasil</h1>
-                <p id="sec1-sub">Transformamos o potencial em potência</p>
-                <button class="sec1-content-btn">
-                    <p>Entre em contato</p>
-                </button>
+    <body>
+        <header>
+            <img
+                src="./img/logo-nuca.png"
+                alt="logo-nuca"
+                class="logo-header"
+            />
+            <p class="p-header"><a href="#about">Sobre nós</a></p>
+            <p class="p-header"><a href="">Universidades</a></p>
+            <p class="p-header"><a href="#services">Serviços</a></p>
+            <p class="p-header"><a href="#parceiros">Parceiros</a></p>
+            <button class="btn-header">
+                <p>Entre em contato</p>
+            </button>
+        </header>
+        <section class="section1">
+            <div class="preenchimento"></div>
+            <div class="sec1-content">
+                <div class="preenchimento2"></div>
+                <div class="sec1-content-txt">
+                    <h1 id="sec1-title">Líderes que transformam o Brasil</h1>
+                    <p id="sec1-sub">Transformamos o potencial em potência</p>
+                    <button class="sec1-content-btn">
+                        <p>Entre em contato</p>
+                    </button>
+                </div>
+                <div class="sec1-content-img">
+                    <!-- <img src="https://picsum.photos/600/400" alt=""> -->
+                    <!-- <div class="sec1-carrousel">
+                    <img src="img/sec1-carrousel/image1.png" id="carrousel-img" alt="">
+                </div> -->
+                </div>
             </div>
-            <div class="sec1-content-img">
-                <img src="https://picsum.photos/600/400" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="section2">
-        <div class="section2-1">
-
-
-            <h1 class="title-s2">Quem somos?</h1>
-            <p class="p-sec2">
-                O <span class="destaque">Núcleo Campinas</span> é a organização responsável por representar, conectar e
-                potencializar o <span class="destaque">Movimento Empresa Júnior (MEJ)</span> na região.
-                Atuamos como um canal central entre as Empresas Juniores, o mercado e as instituições de ensino.
-            </p>
-            <div class="cards">
-                <div class="card card1">
-                    <div class="card-content">
-                        <img src="./img/missao-icon.svg" class="cards-icons" />
-                        <p class="title-card">Missão</p>
-                        <div class="div-pcard">
-                            <p class="pcard-txt">
-                                Formar, por meio da vivência empresarial, líderes comprometidos e capazes de transformar
-                                o brasil em um país empreendedor.
-                            </p>
+        </section>
+        <section class="section2" id="about">
+            <div class="section2-1">
+                <h1 class="title-s2">Quem somos?</h1>
+                <p class="p-sec2">
+                    O <span class="destaque">Núcleo Campinas</span> é a
+                    organização responsável por representar, conectar e
+                    potencializar o
+                    <span class="destaque">Movimento Empresa Júnior (MEJ)</span>
+                    na região. Atuamos como um canal central entre as Empresas
+                    Juniores, o mercado e as instituições de ensino.
+                </p>
+                <div class="cards">
+                    <div class="card card1">
+                        <div class="card-content">
+                            <img
+                                src="./img/missao-icon.svg"
+                                class="cards-icons"
+                            />
+                            <p class="title-card">Missão</p>
+                            <div class="div-pcard">
+                                <p class="pcard-txt">
+                                    Formar, por meio da vivência empresarial,
+                                    líderes comprometidos e capazes de
+                                    transformar o brasil em um país
+                                    empreendedor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="card-content">
+                            <img
+                                src="./img/visao-icon.svg"
+                                class="cards-icons"
+                            />
+                            <p class="title-card">Visão</p>
+                            <div class="div-pcard">
+                                <p class="pcard-txt">
+                                    Consolidar-se como a conexão essencial entre
+                                    o ambiente universitário e o mercado de
+                                    trabalho, desenvolvendo as habilidades que o
+                                    futuro exige.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card3">
+                        <div class="card-content">
+                            <img
+                                src="./img/valores-icon.svg"
+                                class="cards-icons"
+                            />
+                            <p class="title-card">Valores</p>
+                            <div class="div-pcard">
+                                <ul class="pcard-list">
+                                    <li>Postura Empreendedora</li>
+                                    <li>Compromisso com Resultado</li>
+                                    <li>Educação</li>
+                                    <li>Juventude</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card card2">
-                    <div class="card-content">
-                        <img src="./img/visao-icon.svg" class="cards-icons" />
-                        <p class="title-card">Visão</p>
-                        <div class="div-pcard">
-                            <p class="pcard-txt">
-                                Consolidar-se como a conexão essencial entre o ambiente universitário e o mercado de
-                                trabalho,
-                                desenvolvendo as habilidades que o futuro exige.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card3">
-                    <div class="card-content">
-                        <img src="./img/valores-icon.svg" class="cards-icons" />
-                        <p class="title-card">Valores </p>
-                        <div class="div-pcard">
-                            <ul class="pcard-list">
-                                <li>Postura Empreendedora</li>
-                                <li>Compromisso com Resultado</li>
-                                <li>Educação</li>
-                                <li>Juventude</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="section2-2">
-            <div class="sec2-2-mapa">
-                <img src="./img/sp-map.svg" alt="">
-            </div>
-            <div class="sec2-2-info">
-                <div class="info-title">
+            <div class="section2-2">
+                <div class="info-title sumir2">
                     <h1>Onde estamos?</h1>
                 </div>
-                <div class="info-content">
-                    <div class="info-espacos">
-                        <div>
-                            <p class="info-content-p">Faturamento</p>
-                            <div class="info-div">
-                                <img src="img/faturamento.svg" alt="">
-                                <span class="info-destaque">+2,2</span><span class="info"> milhões de R$</span>
+                <div class="sec2-2-mapa">
+                    <img src="./img/sp-map.svg" alt="" />
+                </div>
+                <div class="sec2-2-info">
+                    <div class="info-title sumir1">
+                        <h1>Onde estamos?</h1>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-espacos">
+                            <div>
+                                <p class="info-content-p">Faturamento</p>
+                                <div class="info-div">
+                                    <img src="img/faturamento.svg" alt="" />
+                                    <span class="info-destaque">+2,2</span
+                                    ><span class="info"> milhões de R$</span>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <p class="info-content-p">Empresas Juniores</p>
-                            <div class="info-div">
-                                <img src="img/ejs.svg" alt="">
-                                <span class="info-destaque">+45</span><span class="info"> empresas jr</span>
+                            <div>
+                                <p class="info-content-p">Empresas Juniores</p>
+                                <div class="info-div">
+                                    <img src="img/ejs.svg" alt="" />
+                                    <span class="info-destaque">+45</span
+                                    ><span class="info"> empresas jr</span>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <p class="info-content-p">Projetos de impacto</p>
-                            <div class="info-div">
-                                <img src="img/rendimentos.svg" alt="">
-                                <span class="info-destaque">+20</span><span class="info"> empresas parceiras</span>
+                            <div>
+                                <p class="info-content-p">
+                                    Projetos de impacto
+                                </p>
+                                <div class="info-div">
+                                    <img src="img/rendimentos.svg" alt="" />
+                                    <span class="info-destaque">+20</span
+                                    ><span class="info">
+                                        empresas parceiras</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </div>
-    <div class="section3">
-        <div class="sec3-container">
-            <div class="sec3-container-title">
-                <h1>Serviços e Áreas de atuação</h1>
-            </div>
-            <div class="sec3-container-carrousel">
-
-                <button class="btn-voltar">
-                    <img src="./img/back-btn.svg">
-                </button>
-                <div class="carrousel">
-                    <div class="sec3-card sec3-card-1">
-                        <img src="./img/areas-atuacao-icons/agronomia.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Agronomia</p>
-                    </div>
-                    <div class="sec3-card sec3-card-2">
-                        <img src="./img/areas-atuacao-icons/nutricao.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Nutricão</p>
-                    </div>
-                    <div class="sec3-card sec3-card-3">
-                        <img src="./img/areas-atuacao-icons/desenvolvimento.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Desenvolvimento</p>
-                    </div>
-                    <div class="sec3-card sec3-card-4">
-                        <img src="./img/areas-atuacao-icons/meio-ambiente.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Meio Ambiente</p>
-                    </div>
-                    <div class="sec3-card sec3-card-5">
-                        <img src="./img/areas-atuacao-icons/pesq-des.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Pesquisa e Desenvolvimento</p>
-                    </div>
-                    <div class="sec3-card sec3-card-6">
-                        <img src="./img/areas-atuacao-icons/educacao.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Educação
+        </section>
+        <section class="section3" id="services">
+            <div class="sec3-container">
+                <div class="sec3-container-title">
+                    <h1>Serviços e Áreas de atuação</h1>
+                </div>
+                <div class="sec3-container-carrousel">
+                    <button class="btn-voltar">
+                        <img src="./img/back-btn.svg" />
+                    </button>
+                    <div class="carrousel">
+                        <div class="sec3-card sec3-card-1">
+                            <img
+                                src="./img/areas-atuacao-icons/agronomia.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Agronomia</p>
+                        </div>
+                        <div class="sec3-card sec3-card-2">
+                            <img
+                                src="./img/areas-atuacao-icons/nutricao.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Nutricão</p>
+                        </div>
+                        <div class="sec3-card sec3-card-3">
+                            <img
+                                src="./img/areas-atuacao-icons/desenvolvimento.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">
+                                Desenvolvimento
+                            </p>
+                        </div>
+                        <div class="sec3-card sec3-card-4">
+                            <img
+                                src="./img/areas-atuacao-icons/meio-ambiente.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">
+                                Meio Ambiente
+                            </p>
+                        </div>
+                        <div class="sec3-card sec3-card-5">
+                            <img
+                                src="./img/areas-atuacao-icons/pesq-des.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">
+                                Pesquisa e Desenvolvimento
+                            </p>
+                        </div>
+                        <div class="sec3-card sec3-card-6">
+                            <img
+                                src="./img/areas-atuacao-icons/educacao.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Educação</p>
                             <p />
+                        </div>
+                        <div class="sec3-card sec3-card-7">
+                            <img
+                                src="./img/areas-atuacao-icons/eletronica.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">
+                                Eletronica e sistemas de controle
+                            </p>
+                        </div>
+                        <div class="sec3-card sec3-card-8">
+                            <img
+                                src="./img/areas-atuacao-icons/arquitetura.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">
+                                Arquitetura e Urbanismo
+                            </p>
+                        </div>
+                        <div class="sec3-card sec3-card-9">
+                            <img
+                                src="./img/areas-atuacao-icons/eventos-turismo.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">
+                                Eventos e turismo
+                            </p>
+                        </div>
+                        <div class="sec3-card sec3-card-10">
+                            <img
+                                src="./img/areas-atuacao-icons/financas.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Finanças</p>
+                        </div>
+                        <div class="sec3-card sec3-card-11">
+                            <img
+                                src="./img/areas-atuacao-icons/gestao.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Gestão</p>
+                        </div>
+                        <div class="sec3-card sec3-card-12">
+                            <img
+                                src="./img/areas-atuacao-icons/quimica.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Química</p>
+                        </div>
+                        <div class="sec3-card sec3-card-13">
+                            <img
+                                src="./img/areas-atuacao-icons/saude.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Saúde</p>
+                        </div>
+                        <div class="sec3-card sec3-card-14">
+                            <img
+                                src="./img/areas-atuacao-icons/editoriacao.svg"
+                                class="sec3-reverse"
+                                alt=""
+                            />
+                            <p class="sec3-card-p sec3-reverse">Editoração</p>
+                        </div>
                     </div>
-                    <div class="sec3-card sec3-card-7">
-                        <img src="./img/areas-atuacao-icons/eletronica.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Eletronica e sistemas de controle</p>
-                    </div>
-                    <div class="sec3-card sec3-card-8">
-                        <img src="./img/areas-atuacao-icons/arquitetura.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Arquitetura e Urbanismo</p>
-                    </div>
-                    <div class="sec3-card sec3-card-9">
-                        <img src="./img/areas-atuacao-icons/eventos-turismo.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Eventos e turismo</p>
-                    </div>
-                    <div class="sec3-card sec3-card-10">
-                        <img src="./img/areas-atuacao-icons/financas.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Finanças</p>
-                    </div>
-                    <div class="sec3-card sec3-card-11">
-                        <img src="./img/areas-atuacao-icons/gestao.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Gestão</p>
-                    </div>
-                    <div class="sec3-card sec3-card-12">
-                        <img src="./img/areas-atuacao-icons/quimica.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Química</p>
-                    </div>
-                    <div class="sec3-card sec3-card-13">
-                        <img src="./img/areas-atuacao-icons/saude.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Saúde</p>
-                    </div>
-                    <div class="sec3-card sec3-card-14">
-                        <img src="./img/areas-atuacao-icons/editoriacao.svg" class="sec3-reverse" alt="">
-                        <p class="sec3-card-p sec3-reverse">Editoração</p>
-                    </div>
+                    <button class="btn-avancar">
+                        <img src="img/next-btn.svg" />
+                    </button>
                 </div>
-                <button class="btn-avancar">
-                    <img src="img/next-btn.svg">
-                </button>
             </div>
-        </div>
-    </div>
-    <div class="section4">
+        </section>
+        <section class="section4" id="parceiros">
+            <div class="toggle-container" onclick="verificar_tg()">
+                <input type="radio" id="toggle-mej" name="audience" checked />
+                <input type="radio" id="toggle-partners" name="audience" />
 
-    </div>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-
-                <div class="footer-col">
-                    <h3>Núcleo Campinas</h3>
-                    <p class="footer-about-text">
-                        Somos responsáveis por representar, conectar e potencializar o Movimento Empresa Júnior na
-                        Região Campinas.
-                    </p>
-                    <p class="footer-about-text">
-                        <strong>Missão:</strong> Formar, por meio da vivência empresarial, líderes comprometidos e
-                        capazes de transformar o Brasil em um país empreendedor.
-                    </p>
-                    <p class="footer-about-text">
-                        <span class="highlight-text">49 EJs • 13 Cidades • 14 IES</span>
-                    </p>
+                <label for="toggle-mej" class="toggle-label" id="lb-mej"
+                    >Para M.E.J.</label
+                >
+                <label
+                    for="toggle-partners"
+                    class="toggle-label"
+                    id="lb-partners"
+                    >Para Parceiriras</label
+                >
+                <div class="glider"></div>
+            </div>
+            <div class="mej-container">
+                <div class="sec4-1">
+                    <div class="for-mej">
+                        <h1>Potencialize o impacto da sua EJ com o NuCa</h1>
+                        <p>
+                            Conecte-se com os melhores talentos jovens da região
+                            e fortaleça sua presenta no ecossistema empreendedor
+                            através do
+                            <span class="destaque">Núcleo Campinas. </span>
+                        </p>
+                    </div>
+                    <div class="botoes">
+                        <button type="button" class="btn1 bgcolor-secundary">
+                            Quero Federar Minha EJ
+                        </button>
+                        <button type="button" class="btn2 color-secundary">
+                            Saiba mais
+                        </button>
+                    </div>
+                    <div class="sec4-cards">
+                        <div class="sec4-card">
+                            <img src="./img/sec4-icons/shield.svg" alt="" />
+                            <p class="p1 color-secundary">
+                                Segurança e Suporte ao Selo EJ
+                            </p>
+                            <p class="p2">
+                                Auxílio direto na regulamentação jurídica e
+                                contábil, garantindo a conformidade e a obtenção
+                                do Selo EJ.
+                            </p>
+                        </div>
+                        <div class="sec4-card">
+                            <img src="./img/sec4-icons/group.svg" alt="" />
+                            <p class="p1 color-secundary">
+                                Conexão com a Rede Campinas
+                            </p>
+                            <p class="p2">
+                                Networking ativo com mais de 1.000 empresários
+                                juniores para troca de experiências e
+                                benchmarking.
+                            </p>
+                        </div>
+                        <div class="sec4-card">
+                            <img src="./img/sec4-icons/domain.svg" alt="" />
+                            <p class="p1 color-secundary">
+                                Representatividade Institucional
+                            </p>
+                            <p class="p2">
+                                Defesa dos interesses das Empresas Juniores
+                                frente às universidades, mercado e poder
+                                público.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sec4-2 pt-200">
+                        <div class="sec4-2-container">
+                            <div class="bg-linha1">
+                                <div class="linha1">
+                                    <div class="txt-impacto">
+                                        <h3>Impacto Real</h3>
+                                        <p>
+                                            Números que comprovam a força da
+                                            nossa rede na região de campinas
+                                        </p>
+                                    </div>
+                                    <div class="cards-impacto">
+                                        <div class="card-impacto">
+                                            <img
+                                                src="./img/sec4-icons/predio.png"
+                                                alt=""
+                                            />
+                                            <p class="impacto-p1">
+                                                EJs federadas
+                                                <span class="impacto-p2"
+                                                    >+30</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <div class="card-impacto">
+                                            <img
+                                                src="./img/sec4-icons/dinheiro.png"
+                                                alt=""
+                                            />
+                                            <p class="impacto-p1">
+                                                Em Faturamento
+                                                <span class="impacto-p2"
+                                                    >R$ +2,2M</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <div class="card-impacto">
+                                            <img
+                                                src="./img/sec4-icons/calendario.png"
+                                                alt=""
+                                            />
+                                            <p class="impacto-p1">
+                                                Ano de Impacto
+                                                <span class="impacto-p2"
+                                                    >+15</span
+                                                >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-linha2">
+                                <div class="linha2">
+                                    <div class="sec4-necessidade">
+                                        <h2 class="necessidade-h2">
+                                            Necesidade do futuro
+                                        </h2>
+                                        <p class="necessidade-p1">
+                                            Movimento Empresa Júnior
+                                        </p>
+                                        <p class="necessidade-p2">
+                                            O mercado de trabalho futuro demanda
+                                            certas habilidades, e o MEJ é a
+                                            oportunidade de desenvolvimento do
+                                            que o mercado pede.
+                                        </p>
+                                    </div>
+                                    <div class="postit-container">
+                                        <div class="postit tp1">
+                                            <p class="potit-p">
+                                                <span class="span1">52,98%</span
+                                                ><br />
+                                                dos pós-juniores empregados em
+                                                <span class="span2"
+                                                    >até 3 meses.</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <div class="postit tp2">
+                                            <p class="potit-p">
+                                                <span class="span1">87%</span
+                                                ><br />
+                                                dos pós-juniores encontram
+                                                <span class="span2"
+                                                    >soluções criativas.</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <div class="postit tp1">
+                                            <p class="potit-p">
+                                                <span class="span1">90%</span
+                                                ><br />
+                                                dos pós-juniores conseguem
+                                                <span class="span2"
+                                                    >liderar equipes com
+                                                    frequência.</span
+                                                >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="footer-col">
-                    <h3>Navegação</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Nossas EJs</a></li>
-                        <li><a href="#">Portfólio de Serviços</a></li>
-                        <li><a href="#">Evento Alvorada</a></li>
-                        <li><a href="#">Selo EJ 2025</a></li>
-                        <li><a href="#">Seja um Parceiro</a></li>
-                    </ul>
+            </div>
+            <div class="partner-container">
+                <div class="sec4-1">
+                    <div class="for-partnes">
+                        <h1>
+                            Conecte sua marca com os talentos que liderarão o
+                            futuro do mercado
+                        </h1>
+                        <p>
+                            Conecte sua marca aos talentos que liderarão o
+                            <span class="color-primary"
+                                >futuro do mercado.
+                            </span>
+                        </p>
+                    </div>
+                    <div class="botoes">
+                        <button type="button" class="btn1 bgcolor-primary">
+                            Seja um parceiro NuCa
+                        </button>
+                        <button type="button" class="btn2 color-primary">
+                            Saiba mais
+                        </button>
+                    </div>
+                    <div class="sec4-cards">
+                        <div class="sec4-card">
+                            <img
+                                src="./img/sec4-icons/person_search.svg"
+                                alt=""
+                            />
+                            <p class="p1 color-primary">
+                                Acesso a Talentos de Alta Performance
+                            </p>
+                            <p class="p2">
+                                Conecte-se diretamente com jovens universitários
+                                engajados e de alto potencial das melhores
+                                Empresas Juniores da região
+                            </p>
+                        </div>
+                        <div class="sec4-card">
+                            <img src="./img/sec4-icons/megafone.svg" alt="" />
+                            <p class="p1 color-primary">
+                                Fortalecimento de Marca Empregadora
+                            </p>
+                            <p class="p2">
+                                Posicione sua marca como referência e primeira
+                                escolha para as futuras lideranças no mercado em
+                                nossos eventos e ações
+                            </p>
+                        </div>
+                        <div class="sec4-card">
+                            <img src="./img/sec4-icons/school.svg" alt="" />
+                            <p class="p1 color-primary">
+                                Impacto na Educação Brasileira
+                            </p>
+                            <p class="p2">
+                                Contribua ativamente para o desenvolvimento
+                                prático dos estudantes e fomente uma educação
+                                empreendedora de qualidade no Brasil.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sec4-2 pt-50 centralizar">
+                        <h2 class="our_partner_title">NOSSOS PARCEIROS</h2>
+                        <div class="partner-grid">
+                            <div class="card-grid">Siemens Energy</div>
+                            <div class="card-grid">Renner</div>
+                            <div class="card-grid">Bosch</div>
+                            <div class="card-grid">Raizen</div>
+                            <div class="card-grid">Ambev</div>
+                            <div class="card-grid">Stone</div>
+                            <div class="card-grid">Bradesco</div>
+                            <div class="card-grid">TV Globo</div>
+                        </div>
+                        <h2 class="our_partner_title pt-50">
+                            NOSSA JORNADA DE MARCA
+                        </h2>
+                        <div class="jornada">
+                            <div>
+                                <div class="jornada-txt">
+                                    <h4>Visibilidade & Posicionamento</h4>
+                                    <p>
+                                        Amplie sua viibilidade e posicione sua
+                                        marca como referência no ecossistema
+                                        empreendedor universitários.
+                                    </p>
+                                </div>
+                                <div class="jornada-txt">
+                                    <h4>Impulsione sua Força</h4>
+                                    <p>
+                                        Encontre os talentos ideias e impulsione
+                                        sua força de trabalho com a nova geração
+                                        de profissionais.
+                                    </p>
+                                </div>
+                                <div class="jornada-txt">
+                                    <h4>Conexões Autênticas</h4>
+                                    <p>
+                                        Crie conexões autênticas e inspire a
+                                        próxima geração de líderes, gerando
+                                        engajamento profundo com sua marca.
+                                    </p>
+                                </div>
+                            </div>
+                            <img
+                                src="./img/sec4-icons/jornada-icon.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <section class="section5">
+            <div class="form-wrapper">
+                <h2 class="form-title">
+                    Entre em contato <br />
+                    conosco
+                </h2>
 
-                <div class="footer-col">
-                    <h3>Fale Conosco</h3>
-                    <p class="footer-about-text">Quer impulsionar sua empresa ou apoiar o MEJ?</p>
+                <form id="contactForm" onsubmit="sendEmail(event)">
+                    <div class="input-group">
+                        <div class="lb-div">
+                            <label for="nome">Nome:</label>
+                        </div>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        />
+                    </div>
 
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="contact-emails">
-                            <a href="mailto:vpnegocios@nucleocampinas.org">vpnegocios@nucleocampinas.org</a>
-                            <a href="mailto:gabriella.reis@nucleocampinas.org">gabriella.reis@nucleocampinas.org</a>
-                            <a href="mailto:vinicius.lenci@nucleocampinas.org">vinicius.lenci@nucleocampinas.org</a>
+                    <div class="input-group">
+                        <div class="lb-div">
+                            <label for="email">E-mail:</label>
+                        </div>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite um e-mail . Ex: teste@email.com"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <div class="lb-div">
+                            <label for="telefone">Telefone:</label>
+                        </div>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(99) 99999-9999"
+                            maxlength="15"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <div class="lb-div">
+                            <label for="assunto">Assunto:</label>
+                        </div>
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <div class="lb-div">
+                            <label for="descricao">Descrição:</label>
+                        </div>
+                        <textarea
+                            id="descricao"
+                            name="descricao"
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <section class="section6"></section>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h3>Núcleo Campinas</h3>
+                        <p class="footer-about-text">
+                            Somos responsáveis por representar, conectar e
+                            potencializar o Movimento Empresa Júnior na Região
+                            Campinas.
+                        </p>
+                        <p class="footer-about-text">
+                            <strong>Missão:</strong> Formar, por meio da
+                            vivência empresarial, líderes comprometidos e
+                            capazes de transformar o Brasil em um país
+                            empreendedor.
+                        </p>
+                        <p class="footer-about-text">
+                            <span class="highlight-text"
+                                >49 EJs • 13 Cidades • 14 IES</span
+                            >
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Navegação</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Sobre Nós</a></li>
+                            <li><a href="#">Nossas EJs</a></li>
+                            <li><a href="#">Portfólio de Serviços</a></li>
+                            <li><a href="#">Evento Alvorada</a></li>
+                            <li><a href="#">Selo EJ 2025</a></li>
+                            <li><a href="#">Seja um Parceiro</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Fale Conosco</h3>
+                        <p class="footer-about-text">
+                            Quer impulsionar sua empresa ou apoiar o MEJ?
+                        </p>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-emails">
+                                <a href="mailto:vpnegocios@nucleocampinas.org"
+                                    >vpnegocios@nucleocampinas.org</a
+                                >
+                                <a
+                                    href="mailto:gabriella.reis@nucleocampinas.org"
+                                    >gabriella.reis@nucleocampinas.org</a
+                                >
+                                <a
+                                    href="mailto:vinicius.lenci@nucleocampinas.org"
+                                    >vinicius.lenci@nucleocampinas.org</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Campinas e Região, SP</span>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Campinas e Região, SP</span>
-                    </div>
-                </div>
+                    <div class="footer-col">
+                        <h3>Acompanhe</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram">
+                                <i class="">
+                                    <img
+                                        src="./img/footer-icons/instagram.png"
+                                        alt="Link para oInstagram"
+                                    />
+                                </i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn">
+                                <i>
+                                    <img
+                                        src="./img/footer-icons/whatsapp.png"
+                                        alt="Link para oInstagram"
+                                    />
+                                </i>
+                            </a>
+                            <a href="#" aria-label="Facebook">
+                                <i>
+                                    <img src="./img/footer-icons/linkedin.png" alt="Link para o Instagram">
+                                </i>
+                            </a>
+                        </div>
 
-                <div class="footer-col">
-                    <h3>Acompanhe</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-
-                    <div style="margin-top: 30px;">
-                        <h4 style="color: var(--white); font-size: 14px; margin-bottom: 10px;">Afiliação:</h4>
-                        <div style="display: flex; gap: 10px; color: var(--text-grey); font-weight: bold;">
-                            <span>BRASIL JÚNIOR</span> | <span>FEJESP</span>
+                        <div style="margin-top: 30px">
+                            <h4
+                                style="
+                                    color: var(--white);
+                                    font-size: 14px;
+                                    margin-bottom: 10px;
+                                "
+                            >
+                                Afiliação:
+                            </h4>
+                            <div
+                                style="
+                                    display: flex;
+                                    gap: 10px;
+                                    color: var(--text-grey);
+                                    font-weight: bold;
+                                "
+                            >
+                                <span>BRASIL JÚNIOR</span> | <span>FEJESP</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2025 Núcleo Campinas. Todos os direitos
+                        reservados.
+                    </p>
+                </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Núcleo Campinas. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="/js/index.js"></script>
-    <script src="/js/reveal.js"></script>
-</body>
-
+        </footer>
+        <script src="/js/index.js"></script>
+        <script src="/js/reveal.js"></script>
+        <script src="./js/email.js"></script>
+    </body>
 </html>

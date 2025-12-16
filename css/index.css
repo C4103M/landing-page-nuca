@@ -5,7 +5,11 @@
 @import url("sections/section2.css");
 @import url("sections/section3.css");
 @import url("sections/section4.css");
-
+@import url("sections/section5.css");
+@import url("sections/section6.css");
+html {
+  scroll-behavior: smooth;
+}
 :root {
     --background-color: #1F63A0;
     --background-secondary: #00B081;
@@ -16,6 +20,9 @@
 
     --text-grey: #b3b3b3;
     --dark-blue: #001220;
+    --bg-input: #f2f2f2;
+
+    --border-radius: 8px;
 }
 
 * {

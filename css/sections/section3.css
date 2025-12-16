@@ -5,8 +5,8 @@
     background-image: url("../../img/layered-waves-haikei.svg");
     /* background-color: var(--testeazul); */
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-y: -300px;
+    background-size: cover; 
+    background-position: center;
 }
 
 .sec3-container {
@@ -33,7 +33,7 @@
 .carrousel {
     display: flex;
     /* Inimigo da responsividade */
-    width: 1496px;
+    width: 90%;
     height: 100%;
     gap: 32px;
     align-items: center;
@@ -69,7 +69,7 @@
     font-weight: 600;
     line-height: 140%;
     /* 44.8px */
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
     
 }
 
@@ -80,7 +80,8 @@
 .sec3-card:hover {
     transform: translateY(-10px);
     /* filter: brightness(0.4);      */
-    border: 5px #F6F6F6 solid;
+    /* border: 5px #F6F6F6 solid;    */
+    /* position: absolute; */
 
 }
 
@@ -228,4 +229,15 @@ background: linear-gradient(135deg, #1F1C2C 0%, #928DAB 100%);
 .sec3-card-14:hover {
     background-image: url("../../img/areas-atuacao-img/img-editoriacao.png");
 
+}
+
+
+
+@media (max-width: 1280px) {
+    .sec3-card {
+        transform: scale(0.85);
+    }
+    .sec3-card:hover {
+        transform: translateY(-15px) scale(0.85);
+    }
 }

@@ -1,0 +1,111 @@
+
+.section5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--background-secondary);
+}
+
+/* Container do Formulário */
+.form-wrapper {
+    width: clamp(370px, 100%, 600px);
+    max-width: 400px; /* Limita a largura em telas grandes */
+    background: transparent;
+    /* border: 1px solid var(--text); */
+    background-color: #EFEFEF;
+    border-radius: 8px;
+    padding: 50px;
+}
+/* Título */
+.form-title {
+    color: var(--teste-cta);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+/* Grupos de Input */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.lb-div {
+    width: 100%;
+    padding-left: 10%;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Estilo dos Inputs e Textarea */
+.input-group input,
+.input-group textarea {
+    width: 80%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    background-color: var(--bg-input);
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao clicar no input */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--teste-cta);
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #b0b0b0;
+}
+
+/* Botão Enviar */
+.btn-enviar {
+    width: 180px; /* Largura fixa para ficar igual imagem */
+    display: block;
+    margin: 20px auto 20px auto; /* Centraliza o botão */
+    padding: 12px;
+    background-color: var(--teste-cta);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra embaixo */
+    transition: background 0.3s, transform 0.1s;
+}
+
+.btn-enviar:hover {
+    background-color: #007676; /* Um pouco mais escuro no hover */
+}
+
+.btn-enviar:active {
+    transform: translateY(2px); /* Efeito de clique */
+}
+
+/* Responsividade Mobile */
+@media (max-width: 480px) {
+    .btn-enviar {
+        width: 100%; /* No celular o botão ocupa tudo */
+    }
+    
+    .form-wrapper {
+        padding: 0 10px;
+    }
+}

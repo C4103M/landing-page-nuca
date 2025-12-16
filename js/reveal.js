@@ -15,6 +15,8 @@ revelar.reveal(sec1_title, { duration: 1000, distance: '90px' });
 revelar.reveal(sec1_subtitle, { duration: 2000, distance: '90px' });
 revelar.reveal(sec1_btn, { duration: 3000, distance: '90px' });
 
+const isMobile = window.innerWidth < 768;
+
 // Sessão 2
 revelar.reveal(cards, {
     rotate: { x: 80, y: 0, z: 0 },
@@ -41,12 +43,12 @@ revelar.reveal(card_infos,{
     distance: '100%',
     duration: 3000,
     rotate: { x: 80, y: 0, z: 0 },
-    viewFactor: 0.5
+    viewFactor: isMobile ? 0.0 : 0.5
 })
-revelar.reveal(mapa,{
+revelar.reveal(mapa, {
     duration: 4000,
-    viewFactor: 0.5
-})
+    viewFactor: isMobile ? 0.0 : 0.5
+});
 
 // Sessão 3
 revelar.reveal(sec3_carrousel,{
