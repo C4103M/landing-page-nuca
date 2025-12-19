@@ -530,7 +530,42 @@ input[type="radio"] {
 /* --- MEDIA QUERIES (A Mágica da Responsividade) --- */
 
 /* Tablets (telas médias): 2 colunas */
+
+@media only screen and (max-width: 480px) {
+    .section4 {
+        padding-left:  .7em;
+        padding-right: .7em;
+        box-sizing: border-box;
+    }
+
+    .toggle-container {
+        width: 100%;
+    }
+
+    .sec4-cards {
+        flex-direction: column;
+    }
+
+    .sec4-1 .p1 {
+        margin: 0;
+    }
+
+    .sec4-1 .p2 {
+        overflow: visible;
+    }
+
+    .sec4-card {
+        width: auto;
+        height: max-content;
+    }
+
+    .partner-grid .card-grid {
+        width: 100%;
+    }
+}
+
 @media (min-width: 600px) {
+
     .partner-grid {
         grid-template-columns: repeat(2, 1fr);
     }
