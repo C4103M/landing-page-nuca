@@ -4,6 +4,9 @@
    ========================================================================== */
 
 .section4 {
+    padding-left:  .8em;
+    padding-right: .7em;
+    box-sizing: border-box;
     width: 100%;
     background-color: #f1efef;
     padding-top: 50px;
@@ -532,11 +535,6 @@ input[type="radio"] {
 /* Tablets (telas médias): 2 colunas */
 
 @media only screen and (max-width: 480px) {
-    .section4 {
-        padding-left:  .7em;
-        padding-right: .7em;
-        box-sizing: border-box;
-    }
 
     .toggle-container {
         width: 100%;
@@ -564,10 +562,20 @@ input[type="radio"] {
     }
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 481px) and (orientation: portrait) {
+    .sec4-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sec4-card .p1, .sec4-card .p2 {
+        line-height: 1.5;
+        overflow: visible;
+    }
 
     .partner-grid {
         grid-template-columns: repeat(2, 1fr);
+        width: min-content;
     }
 }
 
