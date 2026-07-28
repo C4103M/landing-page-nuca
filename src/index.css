@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Cores Institucionais e Utilitárias do Núcleo Campinas */
+  --color-nuca-primary: #1F63A0;         /* Azul Principal */
+  --color-nuca-primary-dark: #023C65;    /* Azul Escuro Hero */
+  --color-nuca-secondary: #00B081;       /* Verde Secundário / MEJ */
+  --color-nuca-blue-medium: #1D6FA9;     /* Azul Médio (Cards) */
+  --color-nuca-blue-light: #36AFCE;      /* Azul Claro (Cards) */
+  --color-nuca-teal: #00908F;            /* Azul-Esverdeado / CTA / Contato */
+  --color-nuca-dark-blue: #001220;       /* Azul Muito Escuro (Footer) */
+  --color-nuca-text-grey: #b3b3b3;       /* Cinza Texto */
+  --color-nuca-text-dark-grey: #646464;  /* Cinza Escuro */
+  --color-nuca-bg-input: #f2f2f2;        /* Fundo de Input */
+  --color-nuca-bg-grey: #f1efef;         /* Fundo Seção 4 (Parceiros) */
+  
+  /* Fontes do Projeto */
+  --font-rubik: 'Rubik', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* Reset global e estilos base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-rubik);
+  background-color: #ffffff;
+  color: #131516;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Utilitário para ocultar barra de rolagem mas permitir rolagem (Carrossel) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Plano de fundo da Seção 3 (Serviços) */
+.bg-services-waves {
+  background-image: url('./assets/layered-waves-haikei.svg');
+}

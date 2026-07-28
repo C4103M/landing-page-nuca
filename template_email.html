@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Mensagem Recebida</title>
+  <style>
+    /* Resets para garantir compatibilidade */
+    body,
+    table,
+    td,
+    a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    body {
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+
+    /* Estilos responsivos para Mobile */
+    @media screen and (max-width: 525px) {
+      .wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .responsive-table {
+        width: 100% !important;
+      }
+
+      .padding {
+        padding: 10px 5% 15px 5% !important;
+      }
+
+      .mobile-button-container {
+        margin: 0 auto;
+        width: 100% !important;
+      }
+
+      .mobile-button {
+        padding: 15px !important;
+        border: 0 !important;
+        font-size: 16px !important;
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="margin: 0 !important; padding: 0 !important; background-color: #f2f2f2;">
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td bgcolor="#f2f2f2" align="center" style="padding: 30px 10px 30px 10px;" class="padding">
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"
+          class="responsive-table">
+
+          <tr>
+            <td align="center" bgcolor="#1F63A0" style="padding: 30px 0 30px 0; border-radius: 6px 6px 0px 0px;">
+              <h1 style="font-family: sans-serif; font-size: 24px; color: #f3f3f3; margin: 0;">Nova Mensagem</h1>
+              <p style="font-family: sans-serif; font-size: 14px; color: #36AFCE; margin: 5px 0 0 0;">Você recebeu um
+                novo contato pelo site</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td bgcolor="#00B081" height="5" style="font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px; border-radius: 0px 0px 6px 6px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                <tr>
+                  <td align="left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="50" valign="top">
+                          <div
+                            style="background-color: #1D6FA9; color: #ffffff; width: 50px; height: 50px; border-radius: 50%; text-align: center; line-height: 50px; font-size: 24px; font-family: sans-serif;">
+                            👤
+                          </div>
+                        </td>
+                        <td style="padding-left: 15px;" valign="middle">
+                          <div style="font-family: sans-serif; font-size: 18px; color: #001220; font-weight: bold;">
+                            {{name}}
+                          </div>
+                          <div style="font-family: sans-serif; font-size: 13px; color: #b3b3b3;">
+                            {{time}}
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding: 20px 0;">
+                    <div style="height: 1px; background-color: #f2f2f2; border-bottom: 1px dashed #cccccc;"></div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="font-family: sans-serif; font-size: 16px; line-height: 24px; color: #001220;">
+                    <strong style="color: #1F63A0;">Telefone:</strong> <span style="color: #555;">{{telefone}}</span>
+                    <br><br>
+                    <strong style="color: #1F63A0;">Email:</strong> <span style="color: #555;">{{email}}</span>
+                    <br><br>
+                    <strong style="color: #1F63A0;">Assunto:</strong> <span style="color: #555;">{{title}}</span>
+                    <br><br>
+                    <strong style="color: #1F63A0;">Mensagem:</strong>
+                    <div
+                      style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #00B081; margin-top: 10px; border-radius: 4px; color: #333;">
+                      {{message}}
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" style="padding-top: 30px;">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" style="border-radius: 5px;" bgcolor="#00B081">
+                          <a href="#" target="_blank"
+                            style="font-size: 16px; font-family: sans-serif; color: #ffffff; text-decoration: none; padding: 12px 25px; border-radius: 5px; border: 1px solid #00B081; display: inline-block; font-weight: bold;">
+                            Responder Agora
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td bgcolor="#001220" align="center" style="padding: 20px 0 20px 0; border-radius: 6px; margin-top: 20px;">
+              <p style="font-family: sans-serif; font-size: 12px; color: #b3b3b3; margin: 0;">
+                Esta mensagem foi enviada automaticamente pelo sistema.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
