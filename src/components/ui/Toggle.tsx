@@ -7,10 +7,10 @@ interface ToggleProps {
 
 export const Toggle: React.FC<ToggleProps> = ({ activeTab, onChange }) => {
   return (
-    <div className="relative flex rounded-lg bg-[#c9c9c9] p-1 w-[350px] h-[75px] box-border mx-auto max-[480px]:w-full">
+    <div className="relative flex rounded-[24px_0_24px_0] bg-gray-200/80 border border-gray-300/50 p-1 w-[350px] h-[75px] box-border mx-auto max-[480px]:w-full shadow-inner">
       {/* Glider (Fundo deslizante) */}
       <div
-        className={`absolute top-1 left-1 h-[calc(100%-8px)] w-[calc(50%-4px)] bg-white rounded-lg shadow-md transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        className={`absolute top-1 left-1 h-[calc(100%-8px)] w-[calc(50%-4px)] bg-white rounded-[20px_0_20px_0] shadow-md transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           activeTab === 'partners' ? 'translate-x-[calc(100%+4px)]' : 'translate-x-0'
         }`}
       />

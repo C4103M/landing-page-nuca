@@ -24,11 +24,11 @@ function App() {
         {/* Seção 3: Serviços e Áreas de atuação */}
         <ServicesSection />
 
-        {/* Seção 4: Parceiros (MEJ & Empresas) */}
-        <PartnersSection />
+            {/* Seção 4: Parceiros (MEJ & Empresas) */}
+            <PartnersSection />
 
-        {/* Seção de Universidades Parceiras */}
-        <UniversitiesSection />
+            {/* Seção de Universidades Parceiras */}
+            <UniversitiesSection />
 
         {/* Seção 5: Entre em contato */}
         <ContactSection />

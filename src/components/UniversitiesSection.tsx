@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import papelTexture from '../assets/texturas/textura-de-papel-branco-2.webp';
 
 // Importações estáticas dos logotipos para garantir que o Vite empacote e carregue todos com sucesso
 import unicampLogo from '../assets/universidades-parceiras/unicamp.webp';
@@ -70,9 +71,13 @@ export const UniversitiesSection: React.FC = () => {
   return (
     <section 
       id="universidades" 
-      className="w-full bg-[#f8fafc] py-20 px-8 box-border overflow-hidden border-t border-[#e2e8f0]"
+      className="relative w-full bg-repeat py-20 px-8 box-border overflow-hidden border-t border-gray-200/50"
+      style={{ backgroundImage: `url(${papelTexture})` }}
     >
-      <div className="max-w-[1200px] mx-auto flex flex-col items-center">
+      {/* Soft gradient overlay to blend background paper texture and keep high readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f1efef]/75 via-[#f8fafc]/85 to-white/75 pointer-events-none z-0" />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col items-center">
         {/* Cabeçalho da Seção */}
         <div className="text-center max-w-[800px] mb-16">
           <motion.span 
@@ -121,9 +126,9 @@ export const UniversitiesSection: React.FC = () => {
                 variants={itemVariants}
                 whileHover={{ 
                   y: -5,
-                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08)'
+                  boxShadow: '0 12px 24px -10px rgba(0, 0, 0, 0.08), 0 8px 16px -8px rgba(0, 0, 0, 0.08)'
                 }}
-                className="bg-white border border-[#e2e8f0] rounded-xl h-[100px] flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-200 select-none group relative overflow-hidden"
+                className="bg-white border border-gray-200/80 rounded-[20px_0_20px_0] h-[100px] flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-300 select-none group relative overflow-hidden hover:border-nuca-secondary/40"
                 title={uni.fullName}
               >
                 {!hasError ? (

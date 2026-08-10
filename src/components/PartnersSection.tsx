@@ -15,16 +15,26 @@ import personSearchIcon from '../assets/sec4-icons/person_search.svg';
 import megafoneIcon from '../assets/sec4-icons/megafone.svg';
 import schoolIcon from '../assets/sec4-icons/school.svg';
 import jornadaIcon from '../assets/sec4-icons/jornada-icon.png';
+import papelTexture from '../assets/texturas/textura-de-papel-branco-2.webp';
 
 export const PartnersSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'mej' | 'partners'>('mej');
 
   return (
-    <section id="parceiros" className="w-full bg-[#f1efef] py-16 box-border max-[480px]:px-4">
-      {/* Seletor Toggle */}
-      <div className="mb-12">
-        <Toggle activeTab={activeTab} onChange={setActiveTab} />
-      </div>
+    <section 
+      id="parceiros" 
+      className="relative w-full bg-repeat py-16 box-border max-[480px]:px-4 border-t border-gray-200/50"
+      style={{ backgroundImage: `url(${papelTexture})` }}
+    >
+      {/* Soft gradient overlay to blend background paper texture and keep high readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-[#f8fafc]/85 to-[#f1efef]/75 pointer-events-none z-0" />
+      
+      {/* Content wrapper */}
+      <div className="relative z-10 w-full flex flex-col items-center">
+        {/* Seletor Toggle */}
+        <div className="mb-12">
+          <Toggle activeTab={activeTab} onChange={setActiveTab} />
+        </div>
 
       <AnimatePresence mode="wait">
         {activeTab === 'mej' ? (
@@ -59,36 +69,75 @@ export const PartnersSection: React.FC = () => {
             </div>
 
             {/* Cards MEJ */}
-            <div className="flex gap-7 mt-24 justify-center max-[1024px]:flex-wrap max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
-              <Card variant="feature">
-                <img src={shieldIcon} className="h-8 mb-5" alt="Suporte" />
-                <p className="text-nuca-secondary font-rubik text-xl font-semibold mb-3">
+            <div className="flex gap-10 mt-24 justify-center max-[1024px]:flex-wrap max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
+              {/* Card 1: Segurança e Suporte */}
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
+                initial={{ rotate: -2 }}
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Efeito Fita Adesiva (Verde MEJ) */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-8 bg-nuca-secondary/20 backdrop-blur-[1px] rotate-[-2deg] border-l border-r border-dashed border-nuca-secondary/30 shadow-[0_2px_4px_rgba(0,0,0,0.02)] pointer-events-none" />
+                
+                <img src={shieldIcon} className="h-8 mb-5 relative z-10" alt="Suporte" />
+                <p className="text-nuca-secondary font-rubik text-xl font-bold mb-3 relative z-10">
                   Segurança e Suporte ao Selo EJ
                 </p>
-                <p className="text-[#646464] font-rubik text-base font-normal text-left leading-snug">
+                <p className="text-[#334155] font-rubik text-base font-normal text-left leading-relaxed relative z-10">
                   Auxílio direto na regulamentação jurídica e contábil, garantindo a conformidade e a obtenção do Selo EJ.
                 </p>
-              </Card>
+              </motion.div>
 
-              <Card variant="feature">
-                <img src={groupIcon} className="h-8 mb-5" alt="Rede" />
-                <p className="text-nuca-secondary font-rubik text-xl font-semibold mb-3">
+              {/* Card 2: Conexão */}
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
+                initial={{ rotate: 1.5 }}
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Efeito Fita Adesiva (Verde MEJ) */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-8 bg-nuca-secondary/20 backdrop-blur-[1px] rotate-[1.5deg] border-l border-r border-dashed border-nuca-secondary/30 shadow-[0_2px_4px_rgba(0,0,0,0.02)] pointer-events-none" />
+                
+                <img src={groupIcon} className="h-8 mb-5 relative z-10" alt="Rede" />
+                <p className="text-nuca-secondary font-rubik text-xl font-bold mb-3 relative z-10">
                   Conexão com a Rede Campinas
                 </p>
-                <p className="text-[#646464] font-rubik text-base font-normal text-left leading-snug">
+                <p className="text-[#334155] font-rubik text-base font-normal text-left leading-relaxed relative z-10">
                   Networking active com mais de 1.000 empresários juniores para troca de experiências e benchmarking.
                 </p>
-              </Card>
+              </motion.div>
 
-              <Card variant="feature">
-                <img src={domainIcon} className="h-8 mb-5" alt="Representatividade" />
-                <p className="text-nuca-secondary font-rubik text-xl font-semibold mb-3">
+              {/* Card 3: Representatividade */}
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
+                initial={{ rotate: -1 }}
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Efeito Fita Adesiva (Verde MEJ) */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-8 bg-nuca-secondary/20 backdrop-blur-[1px] rotate-[-1deg] border-l border-r border-dashed border-nuca-secondary/30 shadow-[0_2px_4px_rgba(0,0,0,0.02)] pointer-events-none" />
+                
+                <img src={domainIcon} className="h-8 mb-5 relative z-10" alt="Representatividade" />
+                <p className="text-nuca-secondary font-rubik text-xl font-bold mb-3 relative z-10">
                   Representatividade Institucional
                 </p>
-                <p className="text-[#646464] font-rubik text-base font-normal text-left leading-snug">
+                <p className="text-[#334155] font-rubik text-base font-normal text-left leading-relaxed relative z-10">
                   Defesa dos interesses das Empresas Juniores frente às universidades, mercado e poder público.
                 </p>
-              </Card>
+              </motion.div>
             </div>
 
             {/* Sub-seção MEJ: Impacto Real & Post-its */}
@@ -105,21 +154,21 @@ export const PartnersSection: React.FC = () => {
                     </div>
 
                     <div className="flex gap-14 max-[480px]:flex-col max-[480px]:w-full max-[480px]:gap-6">
-                      <Card variant="impact" className="w-[150px] h-[110px] bg-[#c9c9c9] rounded-lg">
+                      <Card variant="impact">
                         <img src={predioIcon} className="h-7 mb-2" alt="EJs" />
                         <p className="text-[#646464] font-rubik text-xs font-semibold">
                           EJs federadas <span className="block text-black text-2xl font-bold mt-1">+30</span>
                         </p>
                       </Card>
 
-                      <Card variant="impact" className="w-[150px] h-[110px] bg-[#c9c9c9] rounded-lg">
+                      <Card variant="impact">
                         <img src={dinheiroIcon} className="h-7 mb-2" alt="Faturamento" />
                         <p className="text-[#646464] font-rubik text-xs font-semibold">
                           Em Faturamento <span className="block text-black text-2xl font-bold mt-1">R$ +2,2M</span>
                         </p>
                       </Card>
 
-                      <Card variant="impact" className="w-[150px] h-[110px] bg-[#c9c9c9] rounded-lg">
+                      <Card variant="impact">
                         <img src={calendarioIcon} className="h-7 mb-2" alt="Anos" />
                         <p className="text-[#646464] font-rubik text-xs font-semibold">
                           Anos de Impacto <span className="block text-black text-2xl font-bold mt-1">+15</span>
@@ -207,36 +256,75 @@ export const PartnersSection: React.FC = () => {
             </div>
 
             {/* Cards Parceiros */}
-            <div className="flex gap-7 mt-24 justify-center max-[1024px]:flex-wrap max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
-              <Card variant="feature">
-                <img src={personSearchIcon} className="h-8 mb-5" alt="Acesso a Talentos" />
-                <p className="text-nuca-primary font-rubik text-xl font-semibold mb-3">
+            <div className="flex gap-10 mt-24 justify-center max-[1024px]:flex-wrap max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
+              {/* Card 1: Acesso a Talentos */}
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
+                initial={{ rotate: -1.5 }}
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Efeito Fita Adesiva (Azul Primário) */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-8 bg-nuca-primary/15 backdrop-blur-[1px] rotate-[-1.5deg] border-l border-r border-dashed border-nuca-primary/20 shadow-[0_2px_4px_rgba(0,0,0,0.02)] pointer-events-none" />
+                
+                <img src={personSearchIcon} className="h-8 mb-5 relative z-10" alt="Acesso a Talentos" />
+                <p className="text-nuca-primary font-rubik text-xl font-bold mb-3 relative z-10">
                   Acesso a Talentos de Alta Performance
                 </p>
-                <p className="text-[#646464] font-rubik text-base font-normal text-left leading-snug">
+                <p className="text-[#334155] font-rubik text-base font-normal text-left leading-relaxed relative z-10">
                   Conecte-se diretamente com jovens universitários engajados e de alto potencial das melhores Empresas Juniores da região.
                 </p>
-              </Card>
+              </motion.div>
 
-              <Card variant="feature">
-                <img src={megafoneIcon} className="h-8 mb-5" alt="Marca Empregadora" />
-                <p className="text-nuca-primary font-rubik text-xl font-semibold mb-3">
+              {/* Card 2: Marca Empregadora */}
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
+                initial={{ rotate: 2 }}
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Efeito Fita Adesiva (Azul Primário) */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-8 bg-nuca-primary/15 backdrop-blur-[1px] rotate-[2deg] border-l border-r border-dashed border-nuca-primary/20 shadow-[0_2px_4px_rgba(0,0,0,0.02)] pointer-events-none" />
+                
+                <img src={megafoneIcon} className="h-8 mb-5 relative z-10" alt="Marca Empregadora" />
+                <p className="text-nuca-primary font-rubik text-xl font-bold mb-3 relative z-10">
                   Fortalecimento de Marca Empregadora
                 </p>
-                <p className="text-[#646464] font-rubik text-base font-normal text-left leading-snug">
+                <p className="text-[#334155] font-rubik text-base font-normal text-left leading-relaxed relative z-10">
                   Posicione sua marca como referência e primeira escolha para as futures lideranças no mercado em nossos eventos e ações.
                 </p>
-              </Card>
+              </motion.div>
 
-              <Card variant="feature">
-                <img src={schoolIcon} className="h-8 mb-5" alt="Educação" />
-                <p className="text-nuca-primary font-rubik text-xl font-semibold mb-3">
+              {/* Card 3: Impacto Educação */}
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
+                initial={{ rotate: -1 }}
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Efeito Fita Adesiva (Azul Primário) */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-8 bg-nuca-primary/15 backdrop-blur-[1px] rotate-[-1deg] border-l border-r border-dashed border-nuca-primary/20 shadow-[0_2px_4px_rgba(0,0,0,0.02)] pointer-events-none" />
+                
+                <img src={schoolIcon} className="h-8 mb-5 relative z-10" alt="Educação" />
+                <p className="text-nuca-primary font-rubik text-xl font-bold mb-3 relative z-10">
                   Impacto na Educação Brasileira
                 </p>
-                <p className="text-[#646464] font-rubik text-base font-normal text-left leading-snug">
+                <p className="text-[#334155] font-rubik text-base font-normal text-left leading-relaxed relative z-10">
                   Contribua ativamente para o desenvolvimento prático dos estudantes e fomente uma educação empreendedora de qualidade no Brasil.
                 </p>
-              </Card>
+              </motion.div>
             </div>
 
             {/* Sub-seção Parceiros: Logos & Jornada */}
@@ -291,6 +379,7 @@ export const PartnersSection: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </section>
   );
 };
