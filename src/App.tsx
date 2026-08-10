@@ -3,6 +3,7 @@ import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
 import { PartnersSection } from './components/PartnersSection';
+import { UniversitiesSection } from './components/UniversitiesSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -25,6 +26,9 @@ function App() {
 
         {/* Seção 4: Parceiros (MEJ & Empresas) */}
         <PartnersSection />
+
+        {/* Seção de Universidades Parceiras */}
+        <UniversitiesSection />
 
         {/* Seção 5: Entre em contato */}
         <ContactSection />
