@@ -49,32 +49,32 @@ export const PartnersSection: React.FC = () => {
           >
             {/* Header MEJ */}
             <div className="text-center max-w-[1069px] px-4">
-              <h1 className="text-[#131516] font-rubik text-[32px] font-semibold mt-10 mb-4">
+              <h1 className="text-[#131516] font-rubik text-2xl sm:text-3xl md:text-[32px] font-semibold mt-10 mb-4 leading-tight">
                 Potencialize o impacto da sua EJ com o NuCa
               </h1>
-              <p className="text-[#646464] font-rubik text-[20px] font-medium leading-relaxed">
+              <p className="text-[#646464] font-rubik text-base sm:text-lg md:text-[20px] font-medium leading-relaxed">
                 Conecte-se com os melhores talentos jovens da região e fortaleça sua presença no ecossistema empreendedor através do{' '}
                 <span className="text-nuca-secondary font-semibold">Núcleo Campinas.</span>
               </p>
             </div>
 
             {/* Botões MEJ */}
-            <div className="flex gap-4 mt-8 justify-center max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
-              <Button variant="primary" className="w-[223px] max-[480px]:w-full">
+            <div className="flex gap-4 mt-8 justify-center max-[768px]:flex-col max-[768px]:w-full max-[768px]:px-4">
+              <Button variant="primary" className="w-[223px] max-[768px]:w-full leading-none py-2 h-10">
                 Quero Federar Minha EJ
               </Button>
-              <Button variant="outline" className="w-[120px] max-[480px]:w-full">
+              <Button variant="outline" className="w-[120px] max-[768px]:w-full leading-none py-2 h-10">
                 Saiba mais
               </Button>
             </div>
 
             {/* Cards MEJ */}
-            <div className="flex gap-10 mt-24 justify-center max-[1024px]:flex-wrap max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
+            <div className="flex gap-10 mt-24 justify-center max-[1024px]:flex-wrap max-[768px]:flex-col max-[768px]:w-full max-[768px]:px-4">
               {/* Card 1: Segurança e Suporte */}
               <motion.div
                 whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
                 initial={{ rotate: -2 }}
-                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[768px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
                   backgroundSize: 'cover',
@@ -97,7 +97,7 @@ export const PartnersSection: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
                 initial={{ rotate: 1.5 }}
-                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[768px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
                   backgroundSize: 'cover',
@@ -120,7 +120,7 @@ export const PartnersSection: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
                 initial={{ rotate: -1 }}
-                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[768px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
                   backgroundSize: 'cover',
@@ -236,32 +236,32 @@ export const PartnersSection: React.FC = () => {
           >
             {/* Header Parceiros */}
             <div className="text-center max-w-[1069px] px-4">
-              <h1 className="text-[#131516] font-rubik text-[32px] font-semibold mt-10 mb-4">
+              <h1 className="text-[#131516] font-rubik text-2xl sm:text-3xl md:text-[32px] font-semibold mt-10 mb-4 leading-tight">
                 Conecte sua marca com os talentos que liderarão o futuro do mercado
               </h1>
-              <p className="text-[#646464] font-rubik text-[20px] font-medium leading-relaxed">
+              <p className="text-[#646464] font-rubik text-base sm:text-lg md:text-[20px] font-medium leading-relaxed">
                 Conecte sua marca aos talentos que liderarão o{' '}
                 <span className="text-nuca-primary font-semibold">futuro do mercado.</span>
               </p>
             </div>
 
             {/* Botões Parceiros */}
-            <div className="flex gap-4 mt-8 justify-center max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
-              <Button variant="secondary" className="w-[223px] max-[480px]:w-full">
+            <div className="flex gap-4 mt-8 justify-center max-[768px]:flex-col max-[768px]:w-full max-[768px]:px-4">
+              <Button variant="secondary" className="w-[223px] max-[768px]:w-full leading-none py-2 h-10">
                 Seja um parceiro NuCa
               </Button>
-              <Button variant="outline" className="w-[120px] max-[480px]:w-full">
+              <Button variant="outline" className="w-[120px] max-[768px]:w-full leading-none py-2 h-10">
                 Saiba mais
               </Button>
             </div>
 
             {/* Cards Parceiros */}
-            <div className="flex gap-10 mt-24 justify-center max-[1024px]:flex-wrap max-[480px]:flex-col max-[480px]:w-full max-[480px]:px-4">
+            <div className="flex gap-10 mt-24 justify-center max-[1024px]:flex-wrap max-[768px]:flex-col max-[768px]:w-full max-[768px]:px-4">
               {/* Card 1: Acesso a Talentos */}
               <motion.div
                 whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
                 initial={{ rotate: -1.5 }}
-                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[768px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
                   backgroundSize: 'cover',
@@ -284,7 +284,7 @@ export const PartnersSection: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
                 initial={{ rotate: 2 }}
-                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[768px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
                   backgroundSize: 'cover',
@@ -307,7 +307,7 @@ export const PartnersSection: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.03, rotate: 0, zIndex: 10 }}
                 initial={{ rotate: -1 }}
-                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[480px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
+                className="relative w-[360px] min-h-[260px] p-8 flex flex-col items-start bg-white shadow-[0_12px_24px_rgba(0,0,0,0.06)] border border-gray-200/40 rounded-[4px] max-[768px]:w-full transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] overflow-hidden"
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${papelTexture})`,
                   backgroundSize: 'cover',
@@ -343,36 +343,38 @@ export const PartnersSection: React.FC = () => {
               </div>
 
               {/* Jornada de Marca */}
-              <h2 className="text-[#0f172a] font-rubik text-2xl font-medium tracking-wide mt-24 mb-10 max-[480px]:mt-16">
+              <h2 className="text-[#0f172a] font-rubik text-2xl font-medium tracking-wide mt-24 mb-10 max-[768px]:mt-16 text-center px-4">
                 NOSSA JORNADA DE MARCA
               </h2>
 
-              <div className="flex gap-[80px] justify-center items-center max-[1024px]:flex-col max-[1024px]:gap-10 max-[480px]:px-4">
-                <div className="flex flex-col gap-8 max-w-[473px]">
-                  <div className="text-right max-[1024px]:text-center">
-                    <h4 className="text-black font-rubik text-xl font-medium mb-2">Visibilidade & Posicionamento</h4>
-                    <p className="text-[#646464] font-rubik text-[16px] leading-relaxed max-[1024px]:mx-auto">
+              <div className="flex flex-row max-[768px]:flex-row-reverse gap-4 sm:gap-10 md:gap-16 lg:gap-20 justify-center items-stretch w-full max-w-[1200px] px-8 max-[768px]:px-4">
+                {/* Coluna de Textos */}
+                <div className="flex flex-col gap-6 md:gap-8 w-full max-w-[473px] justify-between">
+                  <div className="text-right max-[768px]:text-left">
+                    <h4 className="text-black font-rubik text-base sm:text-lg md:text-xl font-medium mb-1 sm:mb-2">Visibilidade & Posicionamento</h4>
+                    <p className="text-[#646464] font-rubik text-[11px] sm:text-sm md:text-[16px] leading-relaxed">
                       Amplie sua visibilidade e posicione sua marca como referência no ecossistema empreendedor universitário.
                     </p>
                   </div>
 
-                  <div className="text-right max-[1024px]:text-center">
-                    <h4 className="text-black font-rubik text-xl font-medium mb-2">Impulsione sua Força</h4>
-                    <p className="text-[#646464] font-rubik text-[16px] leading-relaxed max-[1024px]:mx-auto">
+                  <div className="text-right max-[768px]:text-left">
+                    <h4 className="text-black font-rubik text-base sm:text-lg md:text-xl font-medium mb-1 sm:mb-2">Impulsione sua Força</h4>
+                    <p className="text-[#646464] font-rubik text-[11px] sm:text-sm md:text-[16px] leading-relaxed">
                       Encontre os talentos ideais e impulsione sua força de trabalho com a nova geração de profissionais.
                     </p>
                   </div>
 
-                  <div className="text-right max-[1024px]:text-center">
-                    <h4 className="text-black font-rubik text-xl font-medium mb-2">Conexões Autênticas</h4>
-                    <p className="text-[#646464] font-rubik text-[16px] leading-relaxed max-[1024px]:mx-auto">
+                  <div className="text-right max-[768px]:text-left">
+                    <h4 className="text-black font-rubik text-base sm:text-lg md:text-xl font-medium mb-1 sm:mb-2">Conexões Autênticas</h4>
+                    <p className="text-[#646464] font-rubik text-[11px] sm:text-sm md:text-[16px] leading-relaxed">
                       Crie conexões autênticas e inspire a próxima geração de líderes, gerando engajamento profundo com sua marca.
                     </p>
                   </div>
                 </div>
 
-                <div className="shrink-0 max-[480px]:w-full flex justify-center">
-                  <img src={jornadaIcon} className="h-[400px] object-contain max-[480px]:h-auto max-[480px]:w-[80%]" alt="Jornada Icon" />
+                {/* Coluna da Imagem (Sempre esticada para ter a altura exata da coluna de textos, contendo a imagem em escala proporcional) */}
+                <div className="w-[45px] sm:w-[70px] md:w-[90px] lg:w-[100px] shrink-0 flex justify-center items-center self-stretch py-1">
+                  <img src={jornadaIcon} className="h-full max-h-full w-auto object-contain md:scale-110" alt="Jornada Icon" />
                 </div>
               </div>
             </div>
