@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
         className="max-[428px]:w-[100px] max-[428px]:h-[20px]"
       >
         <p className="text-white font-inter text-base font-semibold max-[428px]:text-[10px]">
-          Entre em contato
+          Contate-nos
         </p>
       </Button>
     </header>

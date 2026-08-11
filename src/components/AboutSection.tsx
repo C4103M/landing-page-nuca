@@ -57,7 +57,8 @@ const pinsData: Pin[] = [
 ];
 
 export const AboutSection: React.FC = () => {
-  const [isCardHovered, setIsCardHovered] = useState(false);
+  const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
+  const isCardHovered = hoveredCardIndex !== null;
 
   return (
     <section
@@ -65,17 +66,17 @@ export const AboutSection: React.FC = () => {
       className="relative w-full min-h-[200vh] bg-repeat overflow-hidden py-16 max-[450px]:min-h-0 max-[450px]:py-8"
       style={{ backgroundImage: `url(${quadriculadoBg})` }}
     >
-      {/* Dark overlay when a card is hovered */}
+      {/* Dark overlay with blur when a card is hovered */}
       <div
-        className={`absolute inset-0 bg-black/60 transition-opacity duration-300 pointer-events-none z-10 ${
+        className={`fixed inset-0 bg-black/35 backdrop-blur-[2px] transition-all duration-300 pointer-events-none z-30 ${
           isCardHovered ? 'opacity-100' : 'opacity-0'
         }`}
       />
 
       {/* Seção 2-1: Quem Somos */}
-      <div className="relative w-full min-h-[60vh] z-20 flex flex-col items-start px-24 max-[1280px]:px-12 max-[450px]:px-4 max-[450px]:items-center">
+      <div className="relative w-full min-h-[60vh] flex flex-col items-start px-24 max-[1280px]:px-12 max-[450px]:px-4 max-[450px]:items-center">
         <div
-          className={`transition-all duration-300 rounded-[50px_0_50px_0] max-w-[700px] mt-24 max-[450px]:mt-10 mb-12 -ml-6 p-6 max-[450px]:ml-0 max-[450px]:px-4 ${
+          className={`transition-all duration-300 rounded-[50px_0_50px_0] max-w-[700px] mt-24 max-[450px]:mt-10 mb-12 -ml-6 p-6 max-[450px]:ml-0 max-[450px]:px-4 relative z-40 ${
             isCardHovered 
               ? 'bg-nuca-secondary text-white shadow-xl' 
               : 'bg-transparent text-nuca-primary'
@@ -85,7 +86,7 @@ export const AboutSection: React.FC = () => {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
             className={`font-rubik text-[48px] font-semibold leading-[140%] mb-4 max-[450px]:text-[38px] max-[450px]:text-center transition-colors duration-300 ${
               isCardHovered ? 'text-white drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]' : 'text-nuca-primary'
             }`}
@@ -97,7 +98,7 @@ export const AboutSection: React.FC = () => {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
             className={`font-rubik text-[20px] font-semibold leading-[140%] text-justify max-[320px]:text-[18px] transition-colors duration-300 ${
               isCardHovered ? 'text-white' : 'text-nuca-primary'
             }`}
@@ -127,15 +128,21 @@ export const AboutSection: React.FC = () => {
           initial={{ opacity: 0, rotateX: 80 }}
           whileInView={{ opacity: 1, rotateX: 0 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 2.0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-full flex justify-center items-center gap-[127px] py-8 max-[1280px]:gap-[50px] max-[1280px]:scale-[0.9] max-[884px]:scale-[0.8] max-[450px]:flex-col max-[450px]:scale-100 max-[450px]:gap-8"
         >
           {/* Card 1: Missão */}
           <Card
             variant="about"
-            className="bg-nuca-blue-medium hover:backdrop-blur-sm z-30"
-            onMouseEnter={() => setIsCardHovered(true)}
-            onMouseLeave={() => setIsCardHovered(false)}
+            onMouseEnter={() => setHoveredCardIndex(0)}
+            onMouseLeave={() => setHoveredCardIndex(null)}
+            className={`bg-nuca-blue-medium transition-all duration-300 ${
+              hoveredCardIndex === 0 
+                ? 'relative z-40 scale-105 shadow-2xl ring-4 ring-white/10' 
+                : hoveredCardIndex !== null 
+                  ? 'relative z-10 opacity-30 scale-95 blur-[1px]' 
+                  : 'relative z-30'
+            }`}
           >
             <div className="flex flex-col justify-center items-center p-6 text-center">
               <img src={missaoIcon} className="h-16 mb-4" alt="Missão Icon" />
@@ -151,9 +158,15 @@ export const AboutSection: React.FC = () => {
           {/* Card 2: Visão */}
           <Card
             variant="about"
-            className="bg-nuca-teal hover:backdrop-blur-sm z-30"
-            onMouseEnter={() => setIsCardHovered(true)}
-            onMouseLeave={() => setIsCardHovered(false)}
+            onMouseEnter={() => setHoveredCardIndex(1)}
+            onMouseLeave={() => setHoveredCardIndex(null)}
+            className={`bg-nuca-teal transition-all duration-300 ${
+              hoveredCardIndex === 1 
+                ? 'relative z-40 scale-105 shadow-2xl ring-4 ring-white/10' 
+                : hoveredCardIndex !== null 
+                  ? 'relative z-10 opacity-30 scale-95 blur-[1px]' 
+                  : 'relative z-30'
+            }`}
           >
             <div className="flex flex-col justify-center items-center p-6 text-center">
               <img src={visaoIcon} className="h-16 mb-4" alt="Visão Icon" />
@@ -169,9 +182,15 @@ export const AboutSection: React.FC = () => {
           {/* Card 3: Valores */}
           <Card
             variant="about"
-            className="bg-nuca-blue-light hover:backdrop-blur-sm z-30"
-            onMouseEnter={() => setIsCardHovered(true)}
-            onMouseLeave={() => setIsCardHovered(false)}
+            onMouseEnter={() => setHoveredCardIndex(2)}
+            onMouseLeave={() => setHoveredCardIndex(null)}
+            className={`bg-nuca-blue-light transition-all duration-300 ${
+              hoveredCardIndex === 2 
+                ? 'relative z-40 scale-105 shadow-2xl ring-4 ring-white/10' 
+                : hoveredCardIndex !== null 
+                  ? 'relative z-10 opacity-30 scale-95 blur-[1px]' 
+                  : 'relative z-30'
+            }`}
           >
             <div className="flex flex-col justify-center items-center p-6 text-center">
               <img src={valoresIcon} className="h-16 mb-4" alt="Valores Icon" />
@@ -197,11 +216,11 @@ export const AboutSection: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           className="w-[55%] max-[960px]:w-full flex flex-col items-center relative"
         >
-          <div className="hidden max-[960px]:block w-full text-center px-4 mb-8">
-            <h1 className="text-nuca-primary font-rubik text-3xl sm:text-4xl font-semibold leading-[140%]">
+          <div className="w-full text-left max-[960px]:text-center px-4 mb-8">
+            <h1 className="text-nuca-primary font-rubik text-[48px] max-[960px]:text-3xl font-semibold leading-[140%]">
               Onde estamos?
             </h1>
           </div>
@@ -236,7 +255,7 @@ export const AboutSection: React.FC = () => {
             {pinsData.map((pin) => (
               <div
                 key={pin.id}
-                className="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center bg-white border border-[#1e60a3] rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.15)]"
+                className="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center bg-white border border-[#1e60a3] rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.15)] transition-all duration-300 hover:scale-[1.6] hover:border-nuca-secondary hover:shadow-[0_0_8px_rgba(30,96,163,0.6)] cursor-pointer"
                 style={{ left: `${pin.hotspot.x}%`, top: `${pin.hotspot.y}%` }}
               >
                 <div className="w-1.5 h-1.5 bg-[#1e60a3] rounded-full" />
@@ -305,15 +324,10 @@ export const AboutSection: React.FC = () => {
           initial={{ opacity: 0, rotateX: 80, x: 50 }}
           whileInView={{ opacity: 1, rotateX: 0, x: 0 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           className="w-[40%] max-[960px]:w-full flex justify-center items-center flex-col"
         >
-          {/* Title for Desktop */}
-          <div className="w-full max-w-[484px] text-left mb-6 max-[960px]:hidden">
-            <h1 className="text-nuca-primary font-rubik text-[48px] font-semibold leading-[140%] relative left-[-40px]">
-              Onde estamos?
-            </h1>
-          </div>
+
 
           {/* Cartão de Faturamento / EJs / Impacto */}
           <div className="w-full max-w-[484px] min-h-[447px] bg-nuca-secondary rounded-[100px_0] flex flex-col justify-center p-12 max-[450px]:py-10 max-[450px]:px-6 max-w-[484px] shadow-lg">

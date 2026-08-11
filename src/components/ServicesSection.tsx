@@ -34,17 +34,25 @@ const serviceCards: ServiceCardData[] = [
 
 export const ServicesSection: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const scrollAmount = 350 + 32;
-
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft -= scrollAmount;
+      const firstCard = carouselRef.current.firstElementChild as HTMLElement;
+      if (firstCard) {
+        const cardWidth = firstCard.offsetWidth;
+        const gap = 32; // gap-8 é 32px
+        carouselRef.current.scrollLeft -= (cardWidth + gap);
+      }
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft += scrollAmount;
+      const firstCard = carouselRef.current.firstElementChild as HTMLElement;
+      if (firstCard) {
+        const cardWidth = firstCard.offsetWidth;
+        const gap = 32;
+        carouselRef.current.scrollLeft += (cardWidth + gap);
+      }
     }
   };
 
@@ -66,7 +74,7 @@ export const ServicesSection: React.FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 2.0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-full flex justify-center items-center px-4"
         >
           {/* Botão de voltar */}
@@ -80,7 +88,7 @@ export const ServicesSection: React.FC = () => {
           {/* Cards Container */}
           <div
             ref={carouselRef}
-            className="flex w-[90%] gap-8 overflow-x-auto scroll-smooth no-scrollbar py-6"
+            className="flex w-[75%] sm:w-[85%] md:w-[90%] gap-6 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar py-6 snap-x snap-mandatory"
           >
             {serviceCards.map((service) => (
               <div
@@ -88,7 +96,7 @@ export const ServicesSection: React.FC = () => {
                 style={{
                   '--bg-hover-image': `url(${service.hoverImage})`,
                 } as React.CSSProperties}
-                className={`group flex-shrink-0 w-[260px] h-[350px] rounded-2xl flex flex-col justify-center items-center text-center p-6 cursor-pointer select-none bg-gradient-to-br ${service.gradient} transition-all duration-300 hover:-translate-y-2 hover:bg-[image:var(--bg-hover-image)] hover:bg-cover hover:bg-center relative overflow-hidden max-[1280px]:scale-[0.85] max-[1280px]:hover:scale-[0.85] max-[1280px]:hover:-translate-y-4`}
+                className={`group flex-shrink-0 w-[260px] max-[480px]:w-[220px] h-[350px] rounded-2xl flex flex-col justify-center items-center text-center p-6 cursor-pointer select-none bg-gradient-to-br ${service.gradient} transition-all duration-300 hover:-translate-y-2 hover:bg-[image:var(--bg-hover-image)] hover:bg-cover hover:bg-center relative overflow-hidden max-[1280px]:scale-[0.85] max-[1280px]:hover:scale-[0.85] max-[1280px]:hover:-translate-y-4 snap-center`}
               >
                 {/* Dim overlay on hover to make text readable on top of background image */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 pointer-events-none" />

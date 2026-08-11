@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
             style={{
               backgroundImage: `url(${slideshowImages[currentImageIndex]})`,
               maskImage: 'linear-gradient(to right, transparent, black 40%)',
@@ -65,7 +65,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 90 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
             className="text-[#FFF9F9] font-rubik text-[48px] font-semibold leading-[140%] w-[609px] max-[450px]:w-full max-[450px]:text-[32px] max-[320px]:text-[25px] max-[320px]:[text-stroke:0.5px_black]"
           >
             Líderes que transformam o Brasil
@@ -75,7 +75,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 90 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.0, delay: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
             className="text-[#FFF9F9] font-rubik text-[20px] font-normal mt-4 mb-8 max-[320px]:text-[18px]"
           >
             Transformamos o potencial em potência
@@ -85,7 +85,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 90 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.0, delay: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
             className="max-[320px]:hidden"
           >
             <Button

@@ -205,7 +205,7 @@ export const ContactSection: React.FC = () => {
             initial={{ opacity: 0, x: isMobile ? 100 : 300, rotate: 0 }}
             whileInView={{ opacity: 1, x: isMobile ? 0 : 140}}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="w-[145%] max-w-[680px] object-contain origin-center max-[884px]:w-[75%] max-[480px]:w-[90%]"
           />
         </div>
