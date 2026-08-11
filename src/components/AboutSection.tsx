@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from './ui/Card';
 
-import missaoIcon from '../assets/missao-icon.svg';
-import visaoIcon from '../assets/visao-icon.svg';
-import valoresIcon from '../assets/valores-icon.svg';
-import spMap from '../assets/sp-map.svg';
-import faturamentoIcon from '../assets/faturamento.svg';
-import ejsIcon from '../assets/ejs.svg';
-import rendimentosIcon from '../assets/rendimentos.svg';
+import missaoIcon from '../assets/icons/missao-icon.svg';
+import visaoIcon from '../assets/icons/visao-icon.svg';
+import valoresIcon from '../assets/icons/valores-icon.svg';
+import spMap from '../assets/mapa/sp-map.svg';
+import faturamentoIcon from '../assets/icons/faturamento.svg';
+import ejsIcon from '../assets/icons/ejs.svg';
+import rendimentosIcon from '../assets/icons/rendimentos.svg';
 
-import quadriculadoBg from '../assets/quadriculado.png';
+import quadriculadoBg from '../assets/texturas/quadriculado.webp';
 
 interface Pin {
   id: string;

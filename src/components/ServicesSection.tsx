@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import backBtn from '../assets/back-btn.svg';
-import nextBtn from '../assets/next-btn.svg';
+import backBtn from '../assets/icons/back-btn.svg';
+import nextBtn from '../assets/icons/next-btn.svg';
 
 // Resolutores dinâmicos compatíveis com o analisador estático do Vite
 const getIconUrl = (name: string) => new URL(`../assets/areas-atuacao-icons/${name}`, import.meta.url).href;
@@ -16,20 +16,20 @@ interface ServiceCardData {
 }
 
 const serviceCards: ServiceCardData[] = [
-  { id: 1, label: 'Agronomia', gradient: 'from-[#134E5E] to-[#71B280]', hoverImage: getImgUrl('img-agronomia.png'), icon: getIconUrl('agronomia.svg') },
-  { id: 2, label: 'Nutrição', gradient: 'from-[#1D976C] to-[#93F9B9]', hoverImage: getImgUrl('img-nutricao.png'), icon: getIconUrl('nutricao.svg') },
-  { id: 3, label: 'Desenvolvimento', gradient: 'from-[#093028] to-[#237A57]', hoverImage: getImgUrl('img-desenvolvimento.png'), icon: getIconUrl('desenvolvimento.svg') },
-  { id: 4, label: 'Meio Ambiente', gradient: 'from-[#1A2980] to-[#26D0CE]', hoverImage: getImgUrl('img-meio-ambiente.png'), icon: getIconUrl('meio-ambiente.svg') },
-  { id: 5, label: 'Pesquisa e Desenvolvimento', gradient: 'from-[#4B79A1] to-[#283E51]', hoverImage: getImgUrl('img-pesquisa-desenvolvimento.png'), icon: getIconUrl('pesq-des.svg') },
-  { id: 6, label: 'Educação', gradient: 'from-[#2C3E50] to-[#3498DB]', hoverImage: getImgUrl('img-educacao.png'), icon: getIconUrl('educacao.svg') },
-  { id: 7, label: 'Eletrônica e controle', gradient: 'from-[#373B44] to-[#4286f4]', hoverImage: getImgUrl('img-eletronica.png'), icon: getIconUrl('eletronica.svg') },
-  { id: 8, label: 'Arquitetura e Urbanismo', gradient: 'from-[#2980B9] to-[#6DD5FA]', hoverImage: getImgUrl('img-arquitetura.png'), icon: getIconUrl('arquitetura.svg') },
-  { id: 9, label: 'Eventos e turismo', gradient: 'from-[#4e54c8] to-[#8f94fb]', hoverImage: getImgUrl('img-turismo.png'), icon: getIconUrl('eventos-turismo.svg') },
-  { id: 10, label: 'Finanças', gradient: 'from-[#141E30] to-[#243B55]', hoverImage: getImgUrl('img-fincancas.png'), icon: getIconUrl('financas.svg') },
-  { id: 11, label: 'Gestão', gradient: 'from-[#2c3e50] to-[#4ca1af]', hoverImage: getImgUrl('img-gestao.png'), icon: getIconUrl('gestao.svg') },
-  { id: 12, label: 'Química', gradient: 'from-[#00d2ff] to-[#3a7bd5]', hoverImage: getImgUrl('img-quimica.png'), icon: getIconUrl('quimica.svg') },
-  { id: 13, label: 'Saúde', gradient: 'from-[#2193b0] to-[#6dd5ed]', hoverImage: getImgUrl('img-saude.png'), icon: getIconUrl('saude.svg') },
-  { id: 14, label: 'Editoração', gradient: 'from-[#1F1C2C] to-[#928DAB]', hoverImage: getImgUrl('img-editoriacao.png'), icon: getIconUrl('editoriacao.svg') },
+  { id: 1, label: 'Agronomia', gradient: 'from-[#134E5E] to-[#71B280]', hoverImage: getImgUrl('img-agronomia.webp'), icon: getIconUrl('agronomia.svg') },
+  { id: 2, label: 'Nutrição', gradient: 'from-[#1D976C] to-[#93F9B9]', hoverImage: getImgUrl('img-nutricao.webp'), icon: getIconUrl('nutricao.svg') },
+  { id: 3, label: 'Desenvolvimento', gradient: 'from-[#093028] to-[#237A57]', hoverImage: getImgUrl('img-desenvolvimento.webp'), icon: getIconUrl('desenvolvimento.svg') },
+  { id: 4, label: 'Meio Ambiente', gradient: 'from-[#1A2980] to-[#26D0CE]', hoverImage: getImgUrl('img-meio-ambiente.webp'), icon: getIconUrl('meio-ambiente.svg') },
+  { id: 5, label: 'Pesquisa e Desenvolvimento', gradient: 'from-[#4B79A1] to-[#283E51]', hoverImage: getImgUrl('img-pesquisa-desenvolvimento.webp'), icon: getIconUrl('pesq-des.svg') },
+  { id: 6, label: 'Educação', gradient: 'from-[#2C3E50] to-[#3498DB]', hoverImage: getImgUrl('img-educacao.webp'), icon: getIconUrl('educacao.svg') },
+  { id: 7, label: 'Eletrônica e controle', gradient: 'from-[#373B44] to-[#4286f4]', hoverImage: getImgUrl('img-eletronica.webp'), icon: getIconUrl('eletronica.svg') },
+  { id: 8, label: 'Arquitetura e Urbanismo', gradient: 'from-[#2980B9] to-[#6DD5FA]', hoverImage: getImgUrl('img-arquitetura.webp'), icon: getIconUrl('arquitetura.svg') },
+  { id: 9, label: 'Eventos e turismo', gradient: 'from-[#4e54c8] to-[#8f94fb]', hoverImage: getImgUrl('img-turismo.webp'), icon: getIconUrl('eventos-turismo.svg') },
+  { id: 10, label: 'Finanças', gradient: 'from-[#141E30] to-[#243B55]', hoverImage: getImgUrl('img-fincancas.webp'), icon: getIconUrl('financas.svg') },
+  { id: 11, label: 'Gestão', gradient: 'from-[#2c3e50] to-[#4ca1af]', hoverImage: getImgUrl('img-gestao.webp'), icon: getIconUrl('gestao.svg') },
+  { id: 12, label: 'Química', gradient: 'from-[#00d2ff] to-[#3a7bd5]', hoverImage: getImgUrl('img-quimica.webp'), icon: getIconUrl('quimica.svg') },
+  { id: 13, label: 'Saúde', gradient: 'from-[#2193b0] to-[#6dd5ed]', hoverImage: getImgUrl('img-saude.webp'), icon: getIconUrl('saude.svg') },
+  { id: 14, label: 'Editoração', gradient: 'from-[#1F1C2C] to-[#928DAB]', hoverImage: getImgUrl('img-editoriacao.webp'), icon: getIconUrl('editoriacao.svg') },
 ];
 
 export const ServicesSection: React.FC = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
-import instagramIcon from '../assets/footer-icons/instagram.png';
-import whatsappIcon from '../assets/footer-icons/whatsapp.png';
-import linkedinIcon from '../assets/footer-icons/linkedin.png';
+import instagramIcon from '../assets/footer-icons/instagram.webp';
+import whatsappIcon from '../assets/footer-icons/whatsapp.webp';
+import linkedinIcon from '../assets/footer-icons/linkedin.webp';
 
 export const Footer: React.FC = () => {
   const handleScroll = (id: string) => {

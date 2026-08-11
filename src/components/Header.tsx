@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './ui/Button';
-import logoNuca from '../assets/logo-nuca.png';
+import logoNuca from '../assets/icons/logo-nuca.svg';
 
 export const Header: React.FC = () => {
   const handleScroll = (id: string) => {

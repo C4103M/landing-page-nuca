@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import canarioImg from '../assets/canario.png';
+import canarioImg from '../assets/icons/canario.webp';
 
 export const ContactSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);

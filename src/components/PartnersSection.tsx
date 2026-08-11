@@ -8,13 +8,13 @@ import { Button } from './ui/Button';
 import shieldIcon from '../assets/sec4-icons/shield.svg';
 import groupIcon from '../assets/sec4-icons/group.svg';
 import domainIcon from '../assets/sec4-icons/domain.svg';
-import predioIcon from '../assets/sec4-icons/predio.png';
-import dinheiroIcon from '../assets/sec4-icons/dinheiro.png';
-import calendarioIcon from '../assets/sec4-icons/calendario.png';
+import predioIcon from '../assets/sec4-icons/predio.webp';
+import dinheiroIcon from '../assets/sec4-icons/dinheiro.webp';
+import calendarioIcon from '../assets/sec4-icons/calendario.webp';
 import personSearchIcon from '../assets/sec4-icons/person_search.svg';
 import megafoneIcon from '../assets/sec4-icons/megafone.svg';
 import schoolIcon from '../assets/sec4-icons/school.svg';
-import jornadaIcon from '../assets/sec4-icons/jornada-icon.png';
+import jornadaIcon from '../assets/sec4-icons/jornada-icon.webp';
 import papelTexture from '../assets/texturas/textura-de-papel-branco-2.webp';
 
 export const PartnersSection: React.FC = () => {

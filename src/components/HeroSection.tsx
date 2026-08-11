@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/Button';
 
-import heroImg1 from '../assets/sec1-carrousel/image1.png';
-import heroImg2 from '../assets/sec1-carrousel/image2.png';
-import heroImg3 from '../assets/sec1-carrousel/image3.png';
-import heroImg4 from '../assets/sec1-carrousel/image4.png';
-import heroImg5 from '../assets/sec1-carrousel/image5.png';
+import heroImg1 from '../assets/sec1-carrousel/image1.webp';
+import heroImg2 from '../assets/sec1-carrousel/image2.webp';
+import heroImg3 from '../assets/sec1-carrousel/image3.webp';
+import heroImg4 from '../assets/sec1-carrousel/image4.webp';
+import heroImg5 from '../assets/sec1-carrousel/image5.webp';
 
 const slideshowImages = [
   heroImg1,
