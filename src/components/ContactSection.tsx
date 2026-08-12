@@ -73,7 +73,7 @@ export const ContactSection: React.FC = () => {
         
         {/* Lado Esquerdo: Card de Formulário */}
         <div className="w-1/2 flex justify-center items-center max-[884px]:w-full">
-          <div className="w-[clamp(370px,100%,600px)] max-w-[450px] bg-[#EFEFEF] rounded-lg p-12 shadow-lg max-[480px]:px-6 max-[480px]:py-8 shrink-0">
+          <div className="w-full max-w-[450px] bg-[#EFEFEF] rounded-lg p-8 shadow-lg max-[480px]:p-6 max-[320px]:p-4">
             <h2 className="text-nuca-teal text-center text-2xl font-bold mb-6 leading-tight">
               Entre em contato <br />
               conosco
@@ -82,7 +82,7 @@ export const ContactSection: React.FC = () => {
             <form onSubmit={handleFormSubmit} className="space-y-4">
               {/* Nome */}
               <div className="flex flex-col items-center">
-                <div className="w-full pl-[10%] text-left">
+                <div className="w-full pl-[10%] max-[480px]:pl-[5%] max-[320px]:pl-[2.5%] text-left">
                   <label htmlFor="nome" className="block text-sm font-bold text-black mb-1">
                     Nome:
                   </label>
@@ -95,13 +95,13 @@ export const ContactSection: React.FC = () => {
                   onChange={handleInputChange}
                   placeholder="Digite seu nome"
                   required
-                  className="w-[80%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
+                  className="w-[80%] max-[480px]:w-[90%] max-[320px]:w-[95%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
                 />
               </div>
 
               {/* Email */}
               <div className="flex flex-col items-center">
-                <div className="w-full pl-[10%] text-left">
+                <div className="w-full pl-[10%] max-[480px]:pl-[5%] max-[320px]:pl-[2.5%] text-left">
                   <label htmlFor="email" className="block text-sm font-bold text-black mb-1">
                     E-mail:
                   </label>
@@ -114,13 +114,13 @@ export const ContactSection: React.FC = () => {
                   onChange={handleInputChange}
                   placeholder="Digite um e-mail. Ex: teste@email.com"
                   required
-                  className="w-[80%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
+                  className="w-[80%] max-[480px]:w-[90%] max-[320px]:w-[95%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
                 />
               </div>
 
               {/* Telefone */}
               <div className="flex flex-col items-center">
-                <div className="w-full pl-[10%] text-left">
+                <div className="w-full pl-[10%] max-[480px]:pl-[5%] max-[320px]:pl-[2.5%] text-left">
                   <label htmlFor="telefone" className="block text-sm font-bold text-black mb-1">
                     Telefone:
                   </label>
@@ -134,13 +134,13 @@ export const ContactSection: React.FC = () => {
                   placeholder="(99) 99999-9999"
                   maxLength={15}
                   required
-                  className="w-[80%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
+                  className="w-[80%] max-[480px]:w-[90%] max-[320px]:w-[95%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
                 />
               </div>
 
               {/* Assunto */}
               <div className="flex flex-col items-center">
-                <div className="w-full pl-[10%] text-left">
+                <div className="w-full pl-[10%] max-[480px]:pl-[5%] max-[320px]:pl-[2.5%] text-left">
                   <label htmlFor="assunto" className="block text-sm font-bold text-black mb-1">
                     Assunto:
                   </label>
@@ -152,13 +152,13 @@ export const ContactSection: React.FC = () => {
                   value={formData.assunto}
                   onChange={handleInputChange}
                   required
-                  className="w-[80%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
+                  className="w-[80%] max-[480px]:w-[90%] max-[320px]:w-[95%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal"
                 />
               </div>
 
               {/* Descrição */}
               <div className="flex flex-col items-center">
-                <div className="w-full pl-[10%] text-left">
+                <div className="w-full pl-[10%] max-[480px]:pl-[5%] max-[320px]:pl-[2.5%] text-left">
                   <label htmlFor="descricao" className="block text-sm font-bold text-black mb-1">
                     Descrição:
                   </label>
@@ -170,7 +170,7 @@ export const ContactSection: React.FC = () => {
                   onChange={handleInputChange}
                   rows={5}
                   required
-                  className="w-[80%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal resize-none"
+                  className="w-[80%] max-[480px]:w-[90%] max-[320px]:w-[95%] px-4 py-3 rounded-lg border border-gray-300 bg-nuca-bg-input text-sm text-gray-800 outline-none transition-colors duration-200 focus:border-nuca-teal resize-none"
                 />
               </div>
 

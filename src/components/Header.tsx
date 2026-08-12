@@ -38,9 +38,9 @@ export const Header: React.FC = () => {
       <Button
         variant="header"
         onClick={() => handleScroll('contact')}
-        className="max-[428px]:w-[100px] max-[428px]:h-[20px]"
+        className="max-[428px]:w-[120px] max-[428px]:h-[36px] max-[428px]:px-2.5"
       >
-        <p className="text-white font-inter text-base font-semibold max-[428px]:text-[10px]">
+        <p className="text-white font-inter text-base font-semibold max-[428px]:text-[13px]">
           Contate-nos
         </p>
       </Button>

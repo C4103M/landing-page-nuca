@@ -47,3 +47,33 @@ body {
 .bg-services-waves {
   background-image: url('./assets/icons/layered-waves-haikei.svg');
 }
+
+/* Otimização proporcional de layout para telas 4k (2560px+) */
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.6;
+  }
+}
+
+/* Estilos padrão do slide de imagens no Desktop (acima de 1280px) */
+.hero-slide-img {
+  background-image: var(--slide-img);
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(to right, transparent, black 40%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
+}
+
+/* Estilos para tablets e celulares (abaixo de 1280px) */
+@media (max-width: 1280px) {
+  .hero-slide-img {
+    background: linear-gradient(0deg, rgba(6, 6, 54, 0.50) 0%, rgba(6, 6, 54, 0.50) 100%), 
+                linear-gradient(180deg, rgba(0, 0, 0, 0.20) 99.95%, rgba(255, 255, 255, 0.20) 99.96%), 
+                var(--slide-img) lightgray 50% / cover no-repeat !important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    filter: blur(0.800000011920929px);
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+}

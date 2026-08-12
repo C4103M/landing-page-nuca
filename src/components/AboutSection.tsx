@@ -87,7 +87,7 @@ export const AboutSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className={`font-rubik text-[48px] font-semibold leading-[140%] mb-4 max-[450px]:text-[38px] max-[450px]:text-center transition-colors duration-300 ${
+            className={`font-rubik text-[48px] font-semibold leading-[140%] mb-4 max-[450px]:text-[32px] max-[320px]:text-[26px] max-[450px]:text-center transition-colors duration-300 ${
               isCardHovered ? 'text-white drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]' : 'text-nuca-primary'
             }`}
           >
@@ -129,7 +129,7 @@ export const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, rotateX: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="w-full flex justify-center items-center gap-[127px] py-8 max-[1280px]:gap-[50px] max-[1280px]:scale-[0.9] max-[884px]:scale-[0.8] max-[450px]:flex-col max-[450px]:scale-100 max-[450px]:gap-8"
+          className="w-full flex flex-wrap justify-center items-stretch max-[450px]:items-center gap-[40px] py-8 px-4 max-[1280px]:gap-[24px] max-[450px]:flex-col max-[450px]:gap-8"
         >
           {/* Card 1: Missão */}
           <Card
@@ -147,8 +147,8 @@ export const AboutSection: React.FC = () => {
             <div className="flex flex-col justify-center items-center p-6 text-center">
               <img src={missaoIcon} className="h-16 mb-4" alt="Missão Icon" />
               <p className="text-white font-rubik text-2xl font-semibold leading-[140%] mb-4">Missão</p>
-              <div className="w-[250px] h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-5">
-                <p className="text-nuca-primary text-[15px] font-semibold leading-[115%] text-center px-1">
+              <div className="w-[235px] min-h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-4">
+                <p className="text-nuca-primary text-[14.5px] font-semibold leading-[125%] text-center px-1">
                   Formar, por meio da vivência empresarial, líderes comprometidos e capazes de transformar o brasil em um país empreendedor.
                 </p>
               </div>
@@ -171,8 +171,8 @@ export const AboutSection: React.FC = () => {
             <div className="flex flex-col justify-center items-center p-6 text-center">
               <img src={visaoIcon} className="h-16 mb-4" alt="Visão Icon" />
               <p className="text-white font-rubik text-2xl font-semibold leading-[140%] mb-4">Visão</p>
-              <div className="w-[250px] h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-5">
-                <p className="text-nuca-primary text-[15px] font-semibold leading-[115%] text-center px-1">
+              <div className="w-[235px] min-h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-4">
+                <p className="text-nuca-primary text-[14.5px] font-semibold leading-[125%] text-center px-1">
                   Consolidar-se como a conexão essencial entre o ambiente universitário e o mercado de trabalho, desenvolvendo as habilidades que o futuro exige.
                 </p>
               </div>
@@ -195,8 +195,8 @@ export const AboutSection: React.FC = () => {
             <div className="flex flex-col justify-center items-center p-6 text-center">
               <img src={valoresIcon} className="h-16 mb-4" alt="Valores Icon" />
               <p className="text-white font-rubik text-2xl font-semibold leading-[140%] mb-4">Valores</p>
-              <div className="w-[250px] h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-5">
-                <ul className="text-nuca-primary text-[14px] font-semibold leading-[115%] list-disc text-left pl-5 space-y-1">
+              <div className="w-[235px] min-h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-4">
+                <ul className="text-nuca-primary text-[13.5px] font-semibold leading-[120%] list-disc text-left pl-4 space-y-1">
                   <li className="marker:text-nuca-secondary marker:text-[1.7em]">Postura Empreendedora</li>
                   <li className="marker:text-nuca-secondary marker:text-[1.7em]">Compromisso com Resultado</li>
                   <li className="marker:text-nuca-secondary marker:text-[1.7em]">Educação</li>
@@ -209,7 +209,7 @@ export const AboutSection: React.FC = () => {
       </div>
 
       {/* Seção 2-2: Onde Estamos */}
-      <div className="relative w-full py-16 px-8 max-[960px]:px-4 z-20 flex flex-row max-[960px]:flex-col items-center justify-between gap-12 max-w-[1280px] mx-auto mt-16 max-[450px]:mt-8">
+      <div className="relative w-full py-16 px-8 max-[960px]:px-4 z-20 flex flex-row max-[960px]:flex-col items-center justify-between gap-12 max-[1280px]:gap-6 max-w-[1280px] mx-auto mt-16 max-[450px]:mt-8">
         
         {/* Mapa com Pins */}
         <motion.div
@@ -217,7 +217,7 @@ export const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="w-[55%] max-[960px]:w-full flex flex-col items-center relative"
+          className="w-[55%] max-[1366px]:scale-[0.88] max-[1200px]:scale-[0.8] max-[1024px]:scale-[0.72] max-[960px]:w-full max-[960px]:scale-100 flex flex-col items-center relative origin-center transition-all duration-300"
         >
           <div className="w-full text-left max-[960px]:text-center px-4 mb-8">
             <h1 className="text-nuca-primary font-rubik text-[48px] max-[960px]:text-3xl font-semibold leading-[140%]">
@@ -272,20 +272,20 @@ export const AboutSection: React.FC = () => {
                     ...pin.card,
                   }}
                 >
-                  <div className="relative w-10 h-10 md:w-[72px] md:h-[72px] rounded-[10px] md:rounded-[16px] border border-[#1e60a3] md:border-2 bg-white flex items-center justify-center shadow-sm">
-                    <span className="text-[#1c1c1c] font-rubik font-bold text-xs md:text-2xl">
+                  <div className="relative w-10 h-10 md:w-[52px] md:h-[52px] lg:w-[72px] lg:h-[72px] rounded-[10px] md:rounded-[12px] lg:rounded-[16px] border border-[#1e60a3] md:border-2 bg-white flex items-center justify-center shadow-sm">
+                    <span className="text-[#1c1c1c] font-rubik font-bold text-xs md:text-lg lg:text-2xl">
                       {pin.number}
                     </span>
 
                     <div
-                      className={`absolute top-1/2 -translate-y-1/2 w-[135px] hidden md:flex flex-col ${
-                        isLeft ? 'right-full mr-4 items-end text-right' : 'left-full ml-4 items-start text-left'
+                      className={`absolute top-1/2 -translate-y-1/2 w-[105px] lg:w-[135px] hidden md:flex flex-col ${
+                        isLeft ? 'right-full mr-3 lg:mr-4 items-end text-right' : 'left-full ml-3 lg:ml-4 items-start text-left'
                       }`}
                     >
-                      <span className="text-[#1e60a3] font-rubik text-base font-bold tracking-wide leading-none uppercase">
+                      <span className="text-[#1e60a3] font-rubik text-[13px] lg:text-base font-bold tracking-wide leading-none uppercase">
                         {pin.title}
                       </span>
-                      <span className="text-[#334155] font-rubik text-[11px] font-normal leading-tight mt-1.5">
+                      <span className="text-[#334155] font-rubik text-[10px] lg:text-[11px] font-normal leading-tight mt-1.5">
                         {pin.text}
                       </span>
                     </div>
@@ -325,51 +325,51 @@ export const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, rotateX: 0, x: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="w-[40%] max-[960px]:w-full flex justify-center items-center flex-col"
+          className="w-[40%] max-[1200px]:w-[45%] max-[960px]:w-full flex justify-center items-center flex-col"
         >
 
 
           {/* Cartão de Faturamento / EJs / Impacto */}
-          <div className="w-full max-w-[484px] min-h-[447px] bg-nuca-secondary rounded-[100px_0] flex flex-col justify-center p-12 max-[450px]:py-10 max-[450px]:px-6 max-w-[484px] shadow-lg">
+          <div className="w-full max-w-[484px] min-h-[447px] bg-nuca-secondary rounded-[100px_0] flex flex-col justify-center p-12 max-[450px]:py-8 max-[450px]:px-4 max-[320px]:px-3 max-[320px]:py-6 shadow-lg">
             <div className="space-y-6">
               {/* Faturamento */}
               <div>
-                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px]">
+                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px] max-[320px]:pl-[10px] max-[320px]:text-[16px]">
                   Faturamento
                 </p>
-                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px]">
-                  <img src={faturamentoIcon} className="h-10" alt="Faturamento Icon" />
-                  <div className="flex items-baseline">
-                    <span className="text-white font-rubik text-[48px] font-medium leading-none">+2,2</span>
-                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2">milhões de R$</span>
+                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px] max-[320px]:pl-[5px] max-[320px]:pt-4">
+                  <img src={faturamentoIcon} className="h-10 shrink-0" alt="Faturamento Icon" />
+                  <div className="flex items-baseline flex-wrap">
+                    <span className="text-white font-rubik text-[48px] font-medium leading-none max-[450px]:text-[36px] max-[320px]:text-[28px]">+2,2</span>
+                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2 max-[450px]:text-[20px] max-[320px]:text-[15px]">milhões de R$</span>
                   </div>
                 </div>
               </div>
 
               {/* Empresas Juniores */}
               <div>
-                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px]">
+                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px] max-[320px]:pl-[10px] max-[320px]:text-[16px]">
                   Empresas Juniores
                 </p>
-                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px]">
-                  <img src={ejsIcon} className="h-10" alt="EJs Icon" />
-                  <div className="flex items-baseline">
-                    <span className="text-white font-rubik text-[48px] font-medium leading-none">+45</span>
-                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2">empresas jr</span>
+                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px] max-[320px]:pl-[5px] max-[320px]:pt-4">
+                  <img src={ejsIcon} className="h-10 shrink-0" alt="EJs Icon" />
+                  <div className="flex items-baseline flex-wrap">
+                    <span className="text-white font-rubik text-[48px] font-medium leading-none max-[450px]:text-[36px] max-[320px]:text-[28px]">+45</span>
+                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2 max-[450px]:text-[20px] max-[320px]:text-[15px]">empresas jr</span>
                   </div>
                 </div>
               </div>
 
               {/* Projetos de impacto */}
               <div>
-                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px]">
+                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px] max-[320px]:pl-[10px] max-[320px]:text-[16px]">
                   Projetos de impacto
                 </p>
-                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px]">
-                  <img src={rendimentosIcon} className="h-10" alt="Impacto Icon" />
-                  <div className="flex items-baseline">
-                    <span className="text-white font-rubik text-[48px] font-medium leading-none">+20</span>
-                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2">empresas parceiras</span>
+                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px] max-[320px]:pl-[5px] max-[320px]:pt-4">
+                  <img src={rendimentosIcon} className="h-10 shrink-0" alt="Impacto Icon" />
+                  <div className="flex items-baseline flex-wrap">
+                    <span className="text-white font-rubik text-[48px] font-medium leading-none max-[450px]:text-[36px] max-[320px]:text-[28px]">+20</span>
+                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2 max-[450px]:text-[20px] max-[320px]:text-[15px]">empresas parceiras</span>
                   </div>
                 </div>
               </div>

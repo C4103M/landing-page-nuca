@@ -36,7 +36,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative w-full h-screen bg-gradient-to-b from-nuca-primary to-nuca-primary-dark flex flex-col justify-center overflow-hidden">
       {/* Slideshow de Imagens (Direto sob a section para ocupar 100% da altura da tela, eliminando a margem superior) */}
-      <div className="absolute right-0 top-0 w-[60%] h-full z-10 max-[1280px]:w-full max-[1280px]:opacity-30 max-[1280px]:h-full max-[1280px]:z-0 pointer-events-none">
+      <div className="absolute right-0 top-0 w-[60%] h-full z-10 max-[1280px]:w-full max-[1280px]:h-full max-[1280px]:z-0 pointer-events-none overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentImageIndex}
@@ -45,11 +45,9 @@ export const HeroSection: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
             style={{
-              backgroundImage: `url(${slideshowImages[currentImageIndex]})`,
-              maskImage: 'linear-gradient(to right, transparent, black 40%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 40%)',
-            }}
-            className="absolute inset-0 bg-cover bg-right-bottom"
+              '--slide-img': `url(${slideshowImages[currentImageIndex]})`,
+            } as React.CSSProperties}
+            className="absolute inset-0 hero-slide-img"
           />
         </AnimatePresence>
       </div>
