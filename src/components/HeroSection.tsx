@@ -37,13 +37,13 @@ export const HeroSection: React.FC = () => {
     <section className="relative w-full h-screen bg-gradient-to-b from-nuca-primary to-nuca-primary-dark flex flex-col justify-center overflow-hidden">
       {/* Slideshow de Imagens (Direto sob a section para ocupar 100% da altura da tela, eliminando a margem superior) */}
       <div className="absolute right-0 top-0 w-[60%] h-full z-10 max-[1280px]:w-full max-[1280px]:h-full max-[1280px]:z-0 pointer-events-none overflow-hidden">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            transition={{ duration: 0.5, ease: 'linear' }}
             style={{
               '--slide-img': `url(${slideshowImages[currentImageIndex]})`,
             } as React.CSSProperties}
@@ -56,42 +56,42 @@ export const HeroSection: React.FC = () => {
       <div className="w-full h-[80px] shrink-0" />
 
       {/* Conteúdo Principal */}
-      <div className="relative w-full flex-1 flex items-center z-20 box-border px-8 max-[1280px]:px-4">
+      <div className="relative w-full flex-1 flex items-center z-20 box-border px-6 sm:px-12 md:px-24">
         {/* Texto com Animações Framer Motion */}
-        <div className="relative z-30 flex flex-col items-start max-w-[650px] ml-[150px] max-[1280px]:ml-10 max-[768px]:ml-4 max-[1280px]:items-center max-[1280px]:text-center max-[1280px]:max-w-full">
+        <div className="relative z-30 flex flex-col items-start max-w-[650px] max-[1280px]:items-center max-[1280px]:text-center max-[1280px]:max-w-full max-[1280px]:mx-auto">
           <motion.h1
-            initial={{ opacity: 0, y: 90 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="text-[#FFF9F9] font-rubik text-[48px] font-semibold leading-[140%] w-[609px] max-[450px]:w-full max-[450px]:text-[32px] max-[320px]:text-[25px] max-[320px]:[text-stroke:0.5px_black]"
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="text-white font-rubik text-4xl sm:text-5xl md:text-[56px] font-bold leading-tight tracking-tight max-w-[620px]"
           >
             Líderes que transformam o Brasil
           </motion.h1>
           
           <motion.p
-            initial={{ opacity: 0, y: 90 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
-            className="text-[#FFF9F9] font-rubik text-[20px] font-normal mt-4 mb-8 max-[320px]:text-[18px]"
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-white/90 font-rubik text-lg sm:text-xl font-normal mt-4 mb-8 max-w-[500px]"
           >
             Transformamos o potencial em potência
           </motion.p>
           
           <motion.div
-            initial={{ opacity: 0, y: 90 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-            className="max-[320px]:hidden"
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full sm:w-auto"
           >
             <Button
               variant="primary"
               onClick={handleContactScroll}
-              className="w-[198px] h-[48px]"
+              className="w-full sm:w-[220px] h-[52px] rounded-xl hover:shadow-lg hover:shadow-nuca-secondary/35 text-base"
             >
-              <span className="text-white font-inter text-base font-semibold">
+              <span className="text-white font-inter font-semibold">
                 Entre em contato
               </span>
             </Button>
