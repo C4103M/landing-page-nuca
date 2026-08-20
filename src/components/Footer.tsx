@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import instagramIcon from '../assets/footer-icons/instagram.webp';
-import whatsappIcon from '../assets/footer-icons/whatsapp.webp';
+// import whatsappIcon from '../assets/footer-icons/whatsapp.webp';
 import linkedinIcon from '../assets/footer-icons/linkedin.webp';
 
 export const Footer: React.FC = () => {
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
               <strong>Missão:</strong> Formar, por meio da vivência empresarial, líderes comprometidos e capazes de transformar o Brasil.
             </p>
             <span className="bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-bold text-nuca-secondary">
-              49 EJs • 13 Cidades • 14 IES
+              47 EJs • 11 Cidades • 11 IES
             </span>
           </div>
 
@@ -79,15 +79,15 @@ export const Footer: React.FC = () => {
             <div className="flex items-start mb-4 text-slate-400">
               <Mail className="text-nuca-secondary mr-3 mt-0.5 shrink-0" size={18} />
               <div className="flex flex-col gap-1.5 text-sm font-semibold">
-                <a href="mailto:vpnegocios@nucleocampinas.org" className="hover:text-white transition-colors duration-200 hover:underline">
-                  vpnegocios@nucleocampinas.org
+                <a href="mailto:henry.honda@nucleocampinas.org" className="hover:text-white transition-colors duration-200 hover:underline">
+                  henry.honda@nucleocampinas.org
                 </a>
-                <a href="mailto:gabriella.reis@nucleocampinas.org" className="hover:text-white transition-colors duration-200 hover:underline">
+                {/* <a href="mailto:gabriella.reis@nucleocampinas.org" className="hover:text-white transition-colors duration-200 hover:underline">
                   gabriella.reis@nucleocampinas.org
                 </a>
                 <a href="mailto:vinicius.lenci@nucleocampinas.org" className="hover:text-white transition-colors duration-200 hover:underline">
                   vinicius.lenci@nucleocampinas.org
-                </a>
+                </a> */}
               </div>
             </div>
 
@@ -105,8 +105,8 @@ export const Footer: React.FC = () => {
             <div className="flex gap-4 mt-2">
               {[
                 { name: 'Instagram', icon: instagramIcon, url: 'https://instagram.com/nucleocampinas' },
-                { name: 'WhatsApp', icon: whatsappIcon, url: '#' },
-                { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com/company/nucleocampinas' }
+                // { name: 'WhatsApp', icon: whatsappIcon, url: '#' },
+                { name: 'LinkedIn', icon: linkedinIcon, url: 'https://www.linkedin.com/company/n%C3%BAcleo-das-empresas-juniores-de-campinas/' }
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -135,7 +135,9 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="border-t border-white/5 pt-8 text-center text-slate-500 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Núcleo Campinas. Todos os direitos reservados.</p>
-          <p className="text-slate-600 font-medium">Desenvolvido com excelência</p>
+          <p className="text-slate-600 font-medium">Desenvolvido por &nbsp; 
+            <a href="https://infinitech.dev.br/" className='underline'>Infinitech</a>
+          </p>
         </div>
       </div>
     </footer>

@@ -24,9 +24,9 @@ interface Pin {
 const pinsData: Pin[] = [
   {
     id: 'ies',
-    number: '14',
+    number: '11',
     title: 'IES',
-    text: 'Estamos em 14 instituições de ensino superior',
+    text: 'Estamos em 11 instituições de ensino superior',
     hotspot: { x: 49, y: 77 },
     card: { left: '1%', top: '15%' }
   },
@@ -40,17 +40,17 @@ const pinsData: Pin[] = [
   },
   {
     id: 'ejs',
-    number: '45',
+    number: '47',
     title: 'EJS',
-    text: 'Temos 45 empresas juniores na região de campinass',
+    text: 'Temos 47 empresas juniores na região de campinass',
     hotspot: { x: 54.5, y: 70.5 },
     card: { right: '20%', top: '8%' }
   },
   {
     id: 'cidades',
-    number: '12',
+    number: '11',
     title: 'CIDADES',
-    text: 'Estamos presentes em 12 cidades',
+    text: 'Estamos presentes em 11 cidades',
     hotspot: { x: 58, y: 86.5 },
     card: { right: '15%', top: '81.5%' }
   }
