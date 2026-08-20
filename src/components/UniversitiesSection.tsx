@@ -115,7 +115,7 @@ export const UniversitiesSection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 w-full justify-center items-center"
+          className="flex flex-wrap justify-center gap-6 w-full max-w-[1100px] mx-auto"
         >
           {universities.map((uni) => {
             const hasError = imageErrors[uni.id];
@@ -128,7 +128,7 @@ export const UniversitiesSection: React.FC = () => {
                   y: -5,
                   boxShadow: '0 12px 24px -10px rgba(0, 0, 0, 0.08), 0 8px 16px -8px rgba(0, 0, 0, 0.08)'
                 }}
-                className="bg-white border border-gray-200/80 rounded-[20px_0_20px_0] h-[100px] flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-300 select-none group relative overflow-hidden hover:border-nuca-secondary/40"
+                className="bg-white border border-gray-200/80 rounded-[20px_0_20px_0] w-[145px] sm:w-[170px] h-[100px] flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-300 select-none group relative overflow-hidden hover:border-nuca-secondary/40 shadow-sm"
                 title={uni.fullName}
               >
                 {!hasError ? (
@@ -136,12 +136,12 @@ export const UniversitiesSection: React.FC = () => {
                     src={uni.logo}
                     alt={`Logo ${uni.shortName}`}
                     onError={() => handleImageError(uni.id)}
-                    className="max-w-full max-h-[70px] object-contain transition-all duration-300 group-hover:scale-105 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
+                    className="max-w-full max-h-[70px] object-contain transition-all duration-300 group-hover:scale-105 filter grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100"
                   />
                 ) : (
                   // Fallback elegante caso a imagem não exista ou falhe ao carregar
                   <div className="flex flex-col items-center justify-center w-full h-full">
-                    <span className="text-nuca-primary font-bold text-lg font-rubik tracking-wide group-hover:text-nuca-secondary transition-colors duration-200">
+                    <span className="text-nuca-primary font-bold text-base sm:text-lg font-rubik tracking-wide group-hover:text-nuca-secondary transition-colors duration-200">
                       {uni.shortName}
                     </span>
                     <span className="text-[10px] text-nuca-text-dark-grey mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 line-clamp-1">

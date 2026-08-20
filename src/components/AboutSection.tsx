@@ -58,65 +58,39 @@ const pinsData: Pin[] = [
 
 export const AboutSection: React.FC = () => {
   const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
-  const isCardHovered = hoveredCardIndex !== null;
 
   return (
     <section
       id="about"
-      className="relative w-full min-h-[200vh] bg-repeat overflow-hidden py-16 max-[450px]:min-h-0 max-[450px]:py-8"
+      className="relative w-full bg-repeat overflow-hidden py-16 md:py-24"
       style={{ backgroundImage: `url(${quadriculadoBg})` }}
     >
-      {/* Dark overlay with blur when a card is hovered */}
-      <div
-        className={`fixed inset-0 bg-black/35 backdrop-blur-[2px] transition-all duration-300 pointer-events-none z-30 ${
-          isCardHovered ? 'opacity-100' : 'opacity-0'
-        }`}
-      />
-
       {/* Seção 2-1: Quem Somos */}
-      <div className="relative w-full min-h-[60vh] flex flex-col items-start px-24 max-[1280px]:px-12 max-[450px]:px-4 max-[450px]:items-center">
-        <div
-          className={`transition-all duration-300 rounded-[50px_0_50px_0] max-w-[700px] mt-24 max-[450px]:mt-10 mb-12 -ml-6 p-6 max-[450px]:ml-0 max-[450px]:px-4 relative z-40 ${
-            isCardHovered 
-              ? 'bg-nuca-secondary text-white shadow-xl' 
-              : 'bg-transparent text-nuca-primary'
-          }`}
-        >
-          <motion.h1
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+      <div className="relative w-full flex flex-col items-start px-6 sm:px-12 md:px-24 lg:px-32 max-w-[1400px] mx-auto">
+        <div className="rounded-[40px_0_40px_0] border border-nuca-primary/10 bg-white/80 backdrop-blur-md max-w-[800px] mt-8 mb-16 p-8 md:p-12 shadow-sm relative z-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className={`font-rubik text-[48px] font-semibold leading-[140%] mb-4 max-[450px]:text-[32px] max-[320px]:text-[26px] max-[450px]:text-center transition-colors duration-300 ${
-              isCardHovered ? 'text-white drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]' : 'text-nuca-primary'
-            }`}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="font-rubik text-nuca-primary text-4xl sm:text-5xl font-bold mb-6 max-[450px]:text-center"
           >
             Quem somos?
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-            className={`font-rubik text-[20px] font-semibold leading-[140%] text-justify max-[320px]:text-[18px] transition-colors duration-300 ${
-              isCardHovered ? 'text-white' : 'text-nuca-primary'
-            }`}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            className="font-rubik text-nuca-text-dark-grey text-lg sm:text-xl font-normal leading-relaxed text-justify max-[450px]:text-center"
           >
             O{' '}
-            <span
-              className={`font-bold transition-colors duration-300 ${
-                isCardHovered ? 'text-nuca-primary-dark font-extrabold' : 'text-nuca-secondary'
-              }`}
-            >
+            <span className="text-nuca-secondary font-semibold">
               Núcleo Campinas
             </span>{' '}
             é a organização responsável por representar, conectar e potencializar o{' '}
-            <span
-              className={`font-bold transition-colors duration-300 ${
-                isCardHovered ? 'text-nuca-primary-dark font-extrabold' : 'text-nuca-secondary'
-              }`}
-            >
+            <span className="text-nuca-secondary font-semibold">
               Movimento Empresa Júnior (MEJ)
             </span>{' '}
             na região. Atuamos como um canal central entre as Empresas Juniores, o mercado e as instituições de ensino.
@@ -125,33 +99,33 @@ export const AboutSection: React.FC = () => {
 
         {/* Cards de Missão, Visão, Valores */}
         <motion.div
-          initial={{ opacity: 0, rotateX: 80 }}
-          whileInView={{ opacity: 1, rotateX: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="w-full flex flex-wrap justify-center items-stretch max-[450px]:items-center gap-[40px] py-8 px-4 max-[1280px]:gap-[24px] max-[450px]:flex-col max-[450px]:gap-8"
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full flex flex-wrap justify-center items-stretch gap-12 md:gap-16 lg:gap-24 py-8"
         >
           {/* Card 1: Missão */}
           <Card
             variant="about"
             onMouseEnter={() => setHoveredCardIndex(0)}
             onMouseLeave={() => setHoveredCardIndex(null)}
-            className={`bg-nuca-blue-medium transition-all duration-300 ${
+            className={`bg-nuca-blue-medium border border-white/10 transition-all duration-300 rounded-[32px_0_32px_0] overflow-hidden ${
               hoveredCardIndex === 0 
-                ? 'relative z-40 scale-105 shadow-2xl ring-4 ring-white/10' 
+                ? 'relative z-20 scale-105 shadow-xl border-white/30' 
                 : hoveredCardIndex !== null 
-                  ? 'relative z-10 opacity-30 scale-95 blur-[1px]' 
-                  : 'relative z-30'
+                  ? 'relative z-10 opacity-50 scale-95' 
+                  : 'relative z-20 shadow-md'
             }`}
           >
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <img src={missaoIcon} className="h-16 mb-4" alt="Missão Icon" />
-              <p className="text-white font-rubik text-2xl font-semibold leading-[140%] mb-4">Missão</p>
-              <div className="w-[235px] min-h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-4">
-                <p className="text-nuca-primary text-[14.5px] font-semibold leading-[125%] text-center px-1">
-                  Formar, por meio da vivência empresarial, líderes comprometidos e capazes de transformar o brasil em um país empreendedor.
-                </p>
+            <div className="flex flex-col justify-start items-center p-8 pt-10 text-center h-full">
+              <div className="w-16 h-16 rounded-full bg-white/15 border border-white/10 flex items-center justify-center mb-6">
+                <img src={missaoIcon} className="h-9 w-9 invert brightness-0" alt="Missão Icon" />
               </div>
+              <h3 className="text-white font-rubik text-2xl font-bold mb-4">Missão</h3>
+              <p className="text-slate-100 text-[15px] font-medium leading-relaxed">
+                Formar, por meio da vivência empresarial, líderes comprometidos e capazes de transformar o Brasil em um país empreendedor.
+              </p>
             </div>
           </Card>
 
@@ -160,22 +134,22 @@ export const AboutSection: React.FC = () => {
             variant="about"
             onMouseEnter={() => setHoveredCardIndex(1)}
             onMouseLeave={() => setHoveredCardIndex(null)}
-            className={`bg-nuca-teal transition-all duration-300 ${
+            className={`bg-nuca-teal border border-white/10 transition-all duration-300 rounded-[32px_0_32px_0] overflow-hidden ${
               hoveredCardIndex === 1 
-                ? 'relative z-40 scale-105 shadow-2xl ring-4 ring-white/10' 
+                ? 'relative z-20 scale-105 shadow-xl border-white/30' 
                 : hoveredCardIndex !== null 
-                  ? 'relative z-10 opacity-30 scale-95 blur-[1px]' 
-                  : 'relative z-30'
+                  ? 'relative z-10 opacity-50 scale-95' 
+                  : 'relative z-20 shadow-md'
             }`}
           >
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <img src={visaoIcon} className="h-16 mb-4" alt="Visão Icon" />
-              <p className="text-white font-rubik text-2xl font-semibold leading-[140%] mb-4">Visão</p>
-              <div className="w-[235px] min-h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-4">
-                <p className="text-nuca-primary text-[14.5px] font-semibold leading-[125%] text-center px-1">
-                  Consolidar-se como a conexão essencial entre o ambiente universitário e o mercado de trabalho, desenvolvendo as habilidades que o futuro exige.
-                </p>
+            <div className="flex flex-col justify-start items-center p-8 pt-10 text-center h-full">
+              <div className="w-16 h-16 rounded-full bg-white/15 border border-white/10 flex items-center justify-center mb-6">
+                <img src={visaoIcon} className="h-9 w-9 invert brightness-0" alt="Visão Icon" />
               </div>
+              <h3 className="text-white font-rubik text-2xl font-bold mb-4">Visão</h3>
+              <p className="text-slate-100 text-[15px] font-medium leading-relaxed">
+                Consolidar-se como a conexão essencial entre o ambiente universitário e o mercado de trabalho, desenvolvendo as habilidades que o futuro exige.
+              </p>
             </div>
           </Card>
 
@@ -184,24 +158,33 @@ export const AboutSection: React.FC = () => {
             variant="about"
             onMouseEnter={() => setHoveredCardIndex(2)}
             onMouseLeave={() => setHoveredCardIndex(null)}
-            className={`bg-nuca-blue-light transition-all duration-300 ${
+            className={`bg-nuca-blue-light border border-white/10 transition-all duration-300 rounded-[32px_0_32px_0] overflow-hidden ${
               hoveredCardIndex === 2 
-                ? 'relative z-40 scale-105 shadow-2xl ring-4 ring-white/10' 
+                ? 'relative z-20 scale-105 shadow-xl border-white/30' 
                 : hoveredCardIndex !== null 
-                  ? 'relative z-10 opacity-30 scale-95 blur-[1px]' 
-                  : 'relative z-30'
+                  ? 'relative z-10 opacity-50 scale-95' 
+                  : 'relative z-20 shadow-md'
             }`}
           >
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <img src={valoresIcon} className="h-16 mb-4" alt="Valores Icon" />
-              <p className="text-white font-rubik text-2xl font-semibold leading-[140%] mb-4">Valores</p>
-              <div className="w-[235px] min-h-[153px] rounded-[24px] bg-[#f3f3f3] flex items-center justify-center p-4">
-                <ul className="text-nuca-primary text-[13.5px] font-semibold leading-[120%] list-disc text-left pl-4 space-y-1">
-                  <li className="marker:text-nuca-secondary marker:text-[1.7em]">Postura Empreendedora</li>
-                  <li className="marker:text-nuca-secondary marker:text-[1.7em]">Compromisso com Resultado</li>
-                  <li className="marker:text-nuca-secondary marker:text-[1.7em]">Educação</li>
-                  <li className="marker:text-nuca-secondary marker:text-[1.7em]">Juventude</li>
-                </ul>
+            <div className="flex flex-col justify-start items-center p-8 pt-10 text-center h-full w-full">
+              <div className="w-16 h-16 rounded-full bg-white/15 border border-white/10 flex items-center justify-center mb-6">
+                <img src={valoresIcon} className="h-9 w-9 invert brightness-0" alt="Valores Icon" />
+              </div>
+              <h3 className="text-white font-rubik text-2xl font-bold mb-5">Valores</h3>
+              <div className="flex flex-col items-center gap-2.5 w-full px-4">
+                {[
+                  'Postura Empreendedora',
+                  'Compromisso com Resultado',
+                  'Educação',
+                  'Juventude'
+                ].map((val, idx) => (
+                  <span 
+                    key={idx} 
+                    className="w-full bg-white/15 border border-white/20 rounded-xl py-1.5 text-xs sm:text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/25"
+                  >
+                    {val}
+                  </span>
+                ))}
               </div>
             </div>
           </Card>
@@ -209,20 +192,20 @@ export const AboutSection: React.FC = () => {
       </div>
 
       {/* Seção 2-2: Onde Estamos */}
-      <div className="relative w-full py-16 px-8 max-[960px]:px-4 z-20 flex flex-row max-[960px]:flex-col items-center justify-between gap-12 max-[1280px]:gap-6 max-w-[1280px] mx-auto mt-16 max-[450px]:mt-8">
+      <div className="relative w-full py-16 px-6 sm:px-12 md:px-24 z-20 flex flex-row max-[960px]:flex-col items-center justify-between gap-12 max-w-[1400px] mx-auto mt-16">
         
         {/* Mapa com Pins */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="w-[55%] max-[1366px]:scale-[0.88] max-[1200px]:scale-[0.8] max-[1024px]:scale-[0.72] max-[960px]:w-full max-[960px]:scale-100 flex flex-col items-center relative origin-center transition-all duration-300"
         >
           <div className="w-full text-left max-[960px]:text-center px-4 mb-8">
-            <h1 className="text-nuca-primary font-rubik text-[48px] max-[960px]:text-3xl font-semibold leading-[140%]">
+            <h2 className="text-nuca-primary font-rubik text-4xl sm:text-5xl font-bold leading-tight">
               Onde estamos?
-            </h1>
+            </h2>
           </div>
 
           <div className="relative w-full aspect-[735/442] max-w-[850px] shrink-0">
@@ -255,7 +238,7 @@ export const AboutSection: React.FC = () => {
             {pinsData.map((pin) => (
               <div
                 key={pin.id}
-                className="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center bg-white border border-[#1e60a3] rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.15)] transition-all duration-300 hover:scale-[1.6] hover:border-nuca-secondary hover:shadow-[0_0_8px_rgba(30,96,163,0.6)] cursor-pointer"
+                className="absolute w-3.5 h-3.5 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center bg-white border border-[#1e60a3] rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.15)] transition-all duration-300 hover:scale-[1.5] hover:border-nuca-secondary hover:shadow-[0_0_8px_rgba(0,176,129,0.8)] cursor-pointer"
                 style={{ left: `${pin.hotspot.x}%`, top: `${pin.hotspot.y}%` }}
               >
                 <div className="w-1.5 h-1.5 bg-[#1e60a3] rounded-full" />
@@ -267,12 +250,12 @@ export const AboutSection: React.FC = () => {
               return (
                 <div
                   key={pin.id}
-                  className="absolute z-30"
+                  className="absolute z-30 animate-none"
                   style={{
                     ...pin.card,
                   }}
                 >
-                  <div className="relative w-10 h-10 md:w-[52px] md:h-[52px] lg:w-[72px] lg:h-[72px] rounded-[10px] md:rounded-[12px] lg:rounded-[16px] border border-[#1e60a3] md:border-2 bg-white flex items-center justify-center shadow-sm">
+                  <div className="relative w-10 h-10 md:w-[52px] md:h-[52px] lg:w-[72px] lg:h-[72px] rounded-[10px] md:rounded-[12px] lg:rounded-[16px] border border-[#1e60a3]/50 md:border-2 bg-white flex items-center justify-center shadow-md hover:border-nuca-secondary transition-colors duration-300">
                     <span className="text-[#1c1c1c] font-rubik font-bold text-xs md:text-lg lg:text-2xl">
                       {pin.number}
                     </span>
@@ -285,7 +268,7 @@ export const AboutSection: React.FC = () => {
                       <span className="text-[#1e60a3] font-rubik text-[13px] lg:text-base font-bold tracking-wide leading-none uppercase">
                         {pin.title}
                       </span>
-                      <span className="text-[#334155] font-rubik text-[10px] lg:text-[11px] font-normal leading-tight mt-1.5">
+                      <span className="text-slate-500 font-rubik text-[10px] lg:text-[11px] font-normal leading-tight mt-1.5">
                         {pin.text}
                       </span>
                     </div>
@@ -299,7 +282,7 @@ export const AboutSection: React.FC = () => {
             {pinsData.map((pin) => (
               <div
                 key={pin.id}
-                className="flex items-center gap-4 bg-white/95 border-2 border-[#1e60a3]/30 rounded-[16px] p-4 shadow-sm w-full"
+                className="flex items-center gap-4 bg-white/95 border border-[#1e60a3]/20 rounded-[16px] p-4 shadow-sm w-full"
               >
                 <div className="w-14 h-14 rounded-[12px] border-2 border-[#1e60a3] bg-white flex items-center justify-center shrink-0">
                   <span className="text-[#1c1c1c] font-rubik font-bold text-lg">
@@ -310,7 +293,7 @@ export const AboutSection: React.FC = () => {
                   <span className="text-[#1e60a3] font-rubik text-base font-bold tracking-wide block uppercase leading-none">
                     {pin.title}
                   </span>
-                  <span className="text-[#334155] font-rubik text-[11px] font-normal leading-relaxed block mt-1">
+                  <span className="text-slate-500 font-rubik text-[11px] font-normal leading-relaxed block mt-1">
                     {pin.text}
                   </span>
                 </div>
@@ -321,58 +304,39 @@ export const AboutSection: React.FC = () => {
 
         {/* Info Content Box */}
         <motion.div
-          initial={{ opacity: 0, rotateX: 80, x: 50 }}
-          whileInView={{ opacity: 1, rotateX: 0, x: 0 }}
+          initial={{ opacity: 0, y: 30, x: 20 }}
+          whileInView={{ opacity: 1, y: 0, x: 0 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="w-[40%] max-[1200px]:w-[45%] max-[960px]:w-full flex justify-center items-center flex-col"
         >
-
-
           {/* Cartão de Faturamento / EJs / Impacto */}
-          <div className="w-full max-w-[484px] min-h-[447px] bg-nuca-secondary rounded-[100px_0] flex flex-col justify-center p-12 max-[450px]:py-8 max-[450px]:px-4 max-[320px]:px-3 max-[320px]:py-6 shadow-lg">
-            <div className="space-y-6">
-              {/* Faturamento */}
-              <div>
-                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px] max-[320px]:pl-[10px] max-[320px]:text-[16px]">
-                  Faturamento
-                </p>
-                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px] max-[320px]:pl-[5px] max-[320px]:pt-4">
-                  <img src={faturamentoIcon} className="h-10 shrink-0" alt="Faturamento Icon" />
-                  <div className="flex items-baseline flex-wrap">
-                    <span className="text-white font-rubik text-[48px] font-medium leading-none max-[450px]:text-[36px] max-[320px]:text-[28px]">+2,2</span>
-                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2 max-[450px]:text-[20px] max-[320px]:text-[15px]">milhões de R$</span>
+          <div className="w-full max-w-[484px] min-h-[447px] bg-nuca-secondary rounded-[64px_0_64px_0] flex flex-col justify-center p-8 md:p-12 shadow-lg">
+            <div className="space-y-8">
+              {[
+                { label: 'Faturamento', value: '+2,2', unit: 'milhões de R$', icon: faturamentoIcon },
+                { label: 'Empresas Juniores', value: '+45', unit: 'empresas jr', icon: ejsIcon },
+                { label: 'Projetos de impacto', value: '+20', unit: 'empresas parceiras', icon: rendimentosIcon },
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-4 text-white">
+                  <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/10 shadow-inner">
+                    <img src={item.icon} className="h-7 w-7" alt={item.label} />
+                  </div>
+                  <div className="flex-1 flex flex-col text-left">
+                    <span className="text-white/80 font-rubik text-xs font-semibold uppercase tracking-wider leading-none">
+                      {item.label}
+                    </span>
+                    <div className="flex items-baseline flex-wrap gap-1.5 mt-1.5">
+                      <span className="font-rubik text-3xl sm:text-4xl font-bold leading-none">
+                        {item.value}
+                      </span>
+                      <span className="font-rubik text-sm sm:text-base font-medium opacity-90 leading-none">
+                        {item.unit}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Empresas Juniores */}
-              <div>
-                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px] max-[320px]:pl-[10px] max-[320px]:text-[16px]">
-                  Empresas Juniores
-                </p>
-                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px] max-[320px]:pl-[5px] max-[320px]:pt-4">
-                  <img src={ejsIcon} className="h-10 shrink-0" alt="EJs Icon" />
-                  <div className="flex items-baseline flex-wrap">
-                    <span className="text-white font-rubik text-[48px] font-medium leading-none max-[450px]:text-[36px] max-[320px]:text-[28px]">+45</span>
-                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2 max-[450px]:text-[20px] max-[320px]:text-[15px]">empresas jr</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Projetos de impacto */}
-              <div>
-                <p className="text-white font-rubik text-[20px] font-medium pl-[50px] relative bottom-[-15px] max-[450px]:pl-[20px] max-[320px]:pl-[10px] max-[320px]:text-[16px]">
-                  Projetos de impacto
-                </p>
-                <div className="flex items-center gap-2 pl-[30px] pt-6 max-[450px]:pl-[10px] max-[320px]:pl-[5px] max-[320px]:pt-4">
-                  <img src={rendimentosIcon} className="h-10 shrink-0" alt="Impacto Icon" />
-                  <div className="flex items-baseline flex-wrap">
-                    <span className="text-white font-rubik text-[48px] font-medium leading-none max-[450px]:text-[36px] max-[320px]:text-[28px]">+20</span>
-                    <span className="text-white font-rubik text-[28px] font-medium leading-none ml-2 max-[450px]:text-[20px] max-[320px]:text-[15px]">empresas parceiras</span>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </motion.div>

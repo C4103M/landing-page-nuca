@@ -426,38 +426,38 @@ export const ServicesSection: React.FC = () => {
         </motion.div>
 
         {/* Ficha de Detalhes Dinâmica (Glassmorphism Premium Claro) */}
-        <div className="w-full max-w-[760px] min-h-[160px] max-[640px]:min-h-[180px] bg-white/90 border border-white/40 backdrop-blur-lg rounded-2xl p-5 flex max-[540px]:flex-col gap-6 items-center shadow-xl relative overflow-hidden transition-all duration-300">
+        <div className="w-full max-w-[760px] min-h-[180px] bg-white/85 border border-white/40 backdrop-blur-xl rounded-[24px_0_24px_0] p-6 md:p-8 flex max-[540px]:flex-col gap-6 items-center shadow-xl relative overflow-hidden transition-all duration-300">
           <AnimatePresence mode="wait">
             {selectedService ? (
               <motion.div
                 key={selectedService.id}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="w-full flex max-[540px]:flex-col gap-5 items-center"
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="w-full flex max-[540px]:flex-col gap-6 items-center"
               >
                 {/* Imagem de Fundo (Lado Esquerdo) */}
                 <div 
-                  className="w-32 h-32 rounded-xl overflow-hidden shrink-0 relative border border-white/40 shadow-inner bg-cover bg-center hidden min-[540px]:block"
+                  className="w-32 h-32 rounded-[16px_0_16px_0] overflow-hidden shrink-0 relative border border-white/50 shadow-md bg-cover bg-center hidden min-[540px]:block"
                   style={{ backgroundImage: `url(${selectedService.hoverImage})` }}
                 >
-                  <div className="absolute inset-0 bg-black/20" />
+                  <div className="absolute inset-0 bg-black/10" />
                 </div>
 
                 {/* Textos Informativos */}
-                <div className="flex-1 flex flex-col justify-center">
-                  <div className="flex items-center gap-2.5">
+                <div className="flex-1 flex flex-col justify-center text-left">
+                  <div className="flex items-center gap-3">
                     <span 
                       style={{ backgroundColor: selectedService.ac }} 
-                      className="w-3.5 h-3.5 rounded-full inline-block animate-pulse shrink-0" 
+                      className="w-3 h-3 rounded-full inline-block animate-pulse shrink-0" 
                     />
                     <h2 
-                      className="text-[#1f63a0] font-rubik text-xl font-bold leading-none tracking-wide"
+                      className="text-nuca-primary font-rubik text-xl md:text-2xl font-bold leading-none tracking-wide"
                       dangerouslySetInnerHTML={{ __html: selectedService.label.replace('<br>', ' ') }}
                     />
                   </div>
-                  <p className="text-slate-600 font-inter text-sm leading-relaxed mt-3">
+                  <p className="text-[#334155] font-inter text-sm md:text-base leading-relaxed mt-4">
                     {selectedService.description}
                   </p>
                 </div>
@@ -468,10 +468,10 @@ export const ServicesSection: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="w-full text-center flex flex-col justify-center items-center py-4"
+                className="w-full text-center flex flex-col justify-center items-center py-6"
               >
-                <div className="w-2.5 h-2.5 rounded-full bg-[#00b081] animate-ping mb-3" />
-                <p className="text-slate-500 font-inter text-sm font-medium tracking-wide">
+                <div className="w-3 h-3 rounded-full bg-nuca-secondary animate-ping mb-4" />
+                <p className="text-slate-500 font-inter text-sm md:text-base font-semibold tracking-wide">
                   Passe o mouse ou toque em uma área da trilha para ver os detalhes do serviço.
                 </p>
               </motion.div>

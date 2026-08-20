@@ -19,8 +19,8 @@ export const Toggle: React.FC<ToggleProps> = ({ activeTab, onChange }) => {
       <button
         type="button"
         onClick={() => onChange('mej')}
-        className={`flex-1 z-10 flex justify-center items-center font-medium text-base transition-colors duration-300 cursor-pointer select-none border-none outline-none ${
-          activeTab === 'mej' ? 'text-nuca-secondary font-semibold' : 'text-gray-500'
+        className={`flex-1 z-10 flex justify-center items-center font-medium text-base transition-all duration-300 cursor-pointer select-none border-none outline-none rounded-[16px_0_16px_0] focus-visible:ring-2 focus-visible:ring-nuca-secondary ${
+          activeTab === 'mej' ? 'text-nuca-secondary font-bold' : 'text-gray-500 hover:text-gray-700'
         }`}
       >
         Para M.E.J.
@@ -30,8 +30,8 @@ export const Toggle: React.FC<ToggleProps> = ({ activeTab, onChange }) => {
       <button
         type="button"
         onClick={() => onChange('partners')}
-        className={`flex-1 z-10 flex justify-center items-center font-medium text-base transition-colors duration-300 cursor-pointer select-none border-none outline-none ${
-          activeTab === 'partners' ? 'text-nuca-primary font-semibold' : 'text-gray-500'
+        className={`flex-1 z-10 flex justify-center items-center font-medium text-base transition-all duration-300 cursor-pointer select-none border-none outline-none rounded-[0_16px_0_16px] focus-visible:ring-2 focus-visible:ring-nuca-primary ${
+          activeTab === 'partners' ? 'text-nuca-primary font-bold' : 'text-gray-500 hover:text-gray-700'
         }`}
       >
         Para Parcerias
